@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   X,
   Menu,
@@ -12,6 +12,18 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../LanguageSwitcher';
 import { Text } from '../ui/Text';
+import hotlinesData from '../../data/hotlines.json';
+import { resolveLucideIcon } from '../../lib/utils';
+import { toast } from 'sonner';
+
+const CURRENCIES = ['USD', 'EUR', 'JPY', 'GBP', 'SGD'];
+const CURRENCY_SYMBOLS: Record<string, string> = {
+  USD: '$',
+  EUR: '€',
+  JPY: '¥',
+  GBP: '£',
+  SGD: '$',
+};
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,15 +47,6 @@ const Navbar: React.FC = () => {
     }
   );
 
-  const currencies = ['USD', 'EUR', 'JPY', 'GBP', 'SGD'];
-  const currencySymbols: Record<string, string> = {
-    USD: '$',
-    EUR: '€',
-    JPY: '¥',
-    GBP: '£',
-    SGD: '$',
-  };
-
   const [exchangeRates, setExchangeRates] = useState<Record<string, number>>(
     () => {
       try {
@@ -62,8 +65,58 @@ const Navbar: React.FC = () => {
     }
   });
   const [currentCurrencyIndex, setCurrentCurrencyIndex] = useState(0);
+  const [shouldScrollHotlines, setShouldScrollHotlines] = useState(false);
+  const hotlineViewportRef = useRef<HTMLDivElement | null>(null);
+  const hotlineMeasureRef = useRef<HTMLDivElement | null>(null);
   const { t } = useTranslation();
   const location = useLocation();
+
+  const fallbackCopyText = (text: string): boolean => {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.setAttribute('readonly', '');
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-9999px';
+    textArea.style.top = '0';
+
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    let copied = false;
+    try {
+      copied = document.execCommand('copy');
+    } catch {
+      copied = false;
+    }
+
+    document.body.removeChild(textArea);
+    return copied;
+  };
+
+  const copyHotlineNumber = async (number: string) => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(number);
+        toast.success('Hotline number copied');
+        return;
+      }
+
+      if (fallbackCopyText(number)) {
+        toast.success('Hotline number copied');
+        return;
+      }
+
+      toast.error('Could not copy hotline number');
+    } catch (error) {
+      if (fallbackCopyText(number)) {
+        toast.success('Hotline number copied');
+      } else {
+        console.error('Failed to copy hotline number:', error);
+        toast.error('Could not copy hotline number');
+      }
+    }
+  };
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -99,7 +152,7 @@ const Navbar: React.FC = () => {
     const fetchExchangeRates = async () => {
       try {
         const ratesObj: Record<string, number> = {};
-        for (const currency of currencies) {
+        for (const currency of CURRENCIES) {
           const response = await fetch(
             `https://api.exchangerate-api.com/v4/latest/${currency}`
           );
@@ -130,7 +183,7 @@ const Navbar: React.FC = () => {
   // Cycle through currencies every 5 seconds
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentCurrencyIndex(prev => (prev + 1) % currencies.length);
+      setCurrentCurrencyIndex(prev => (prev + 1) % CURRENCIES.length);
     }, 5000);
     return () => clearInterval(intervalId);
   }, []);
@@ -148,6 +201,27 @@ const Navbar: React.FC = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Check if hotline items overflow the container to decide whether to animate
+  useEffect(() => {
+    const viewport = hotlineViewportRef.current;
+    const measure = hotlineMeasureRef.current;
+    if (!viewport || !measure) return;
+
+    const checkOverflow = () => {
+      setShouldScrollHotlines(measure.scrollWidth > viewport.clientWidth);
+    };
+
+    checkOverflow();
+
+    const rafId = window.requestAnimationFrame(checkOverflow);
+    window.addEventListener('resize', checkOverflow);
+
+    return () => {
+      window.cancelAnimationFrame(rafId);
+      window.removeEventListener('resize', checkOverflow);
+    };
   }, []);
 
   const isActivePage = (href: string): boolean => {
@@ -174,51 +248,62 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
-      {/* Top bar with additional links */}
+      {/* Top bar with hotlines */}
       <div
-        className={`border-b border-gray-200 transition-all duration-200 overflow-hidden ${
+        className={` bg-red-600  transition-all duration-200 overflow-hidden  ${
           isScrolled ? 'max-h-0' : 'max-h-10'
         }`}
       >
-        <div className="container mx-auto px-4 flex justify-end items-center h-10">
-          <div className="flex items-center space-x-4">
-            <a
-              href="https://bettergov.ph/join-us"
-              className="text-xs text-primary-600 hover:text-primary-700 font-semibold transition-colors"
-              target="_blank"
+        <div className="mx-auto flex justify-end items-center h-10">
+          <div className="slideshow w-full" ref={hotlineViewportRef}>
+            {/* Measure the width of hotline items for scrolling effect */}
+            <div className="slideshow-measure" ref={hotlineMeasureRef}>
+              {hotlinesData.hotlines.map(hotline => {
+                const Icon = resolveLucideIcon(hotline.icon);
+                return (
+                  <button
+                    type="button"
+                    key={`measure-${hotline.slug}`}
+                    className="shrink-0 flex text-nowrap text-white text-sm bg-slate-200/20 px-2 py-1 rounded-md items-center gap-1"
+                  >
+                    <Icon className="h-4 w-4" />
+                    <span>{hotline.name}: </span>
+                    <span className="font-mono">{hotline.number}</span>
+                  </button>
+                );
+              })}
+            </div>
+            <div
+              className={`slideshow-track ${
+                shouldScrollHotlines ? 'is-animated' : 'is-static'
+              }`}
             >
-              🚀 Join Us
-            </a>
-            <a
-              href="https://bettergov.ph/about"
-              className="text-xs text-gray-800 hover:text-primary-600 transition-colors"
-              target="_blank"
-            >
-              About BetterGov
-            </a>
-            <a
-              href="https://www.gov.ph"
-              className="text-xs text-gray-800 hover:text-primary-600 transition-colors"
-              target="_blank"
-            >
-              Official Gov.ph
-            </a>
-
-            <a
-              href="https://bettergov.ph/philippines/hotlines"
-              className="text-xs text-gray-800 hover:text-primary-600 transition-colors"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Hotlines
-            </a>
+              {(shouldScrollHotlines
+                ? [...hotlinesData.hotlines, ...hotlinesData.hotlines]
+                : hotlinesData.hotlines
+              ).map((hotline, idx) => {
+                const Icon = resolveLucideIcon(hotline.icon);
+                return (
+                  <button
+                    type="button"
+                    key={`${hotline.slug}-${idx}`}
+                    onClick={() => copyHotlineNumber(hotline.number)}
+                    className="shrink-0 flex text-nowrap text-white text-sm hover:bg-slate-200/50 hover:-translate-y-0.5 transition-all bg-slate-200/20 px-2 py-1 rounded-md items-center gap-1"
+                  >
+                    <Icon className="h-4 w-4" />
+                    <span>{hotline.name}: </span>
+                    <span className="font-mono">{hotline.number}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
 
       {/* currency exchange, temp, and date */}
       <div
-        className={`bg-primary-800 transition-all duration-300 overflow-hidden${
+        className={`bg-primary-800 transition-all duration-300 overflow-hidden ${
           isScrolled ? 'max-h-0' : 'max-h-14'
         }`}
       >
@@ -227,9 +312,9 @@ const Navbar: React.FC = () => {
             <div key={currentCurrencyIndex} className="animate-fade-in">
               <Text size="xs">
                 {(() => {
-                  const currency = currencies[currentCurrencyIndex];
+                  const currency = CURRENCIES[currentCurrencyIndex];
                   const rate = exchangeRates[currency] || '-';
-                  const symbol = currencySymbols[currency];
+                  const symbol = CURRENCY_SYMBOLS[currency];
                   return (
                     <>
                       {`${symbol}1 ${currency} = ₱${
@@ -243,7 +328,9 @@ const Navbar: React.FC = () => {
 
             <span className="inline text-gray-500 text-xs">|</span>
             <Text size="xs" className="flex items-center gap-1">
-              <Thermometer className="h-4 w-4 inline" /> {temperature}°C
+              <Thermometer className="h-4 w-4 inline" />{' '}
+              <span className="font-extralight text-gray-400">Allen</span>{' '}
+              {temperature}°C
             </Text>
 
             <span className="hidden sm:inline text-gray-500 text-xs">|</span>

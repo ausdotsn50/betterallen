@@ -17,9 +17,13 @@ export default function LanguageSwitcher() {
     <div className="relative group">
       <button className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors">
         <Globe size={16} />
-        <span>{languages.find(lang => lang.code === i18n.language)?.flag}</span>
+        <span>
+          {languages.find(lang => lang.code === i18n.language)?.flag ||
+            languages[0].flag}
+        </span>
         <span className="hidden sm:inline">
-          {languages.find(lang => lang.code === i18n.language)?.name}
+          {languages.find(lang => lang.code === i18n.language)?.name ||
+            languages[0].name}
         </span>
       </button>
 

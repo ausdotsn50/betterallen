@@ -8,13 +8,13 @@ import {
   type Subcategory,
   type CategoryIndex,
 } from '../data/yamlLoader';
-import * as LucideIcons from 'lucide-react';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import ServicesSection from '../components/home/ServicesSection';
 import SEO from '../components/SEO';
 import { Card, CardContent } from '@bettergov/kapwa/card';
 import { Banner } from '@bettergov/kapwa/banner';
 import { useState, useEffect } from 'react';
+import { resolveLucideIcon } from '../lib/utils';
 
 const Services: React.FC = () => {
   const { category } = useParams();
@@ -30,9 +30,7 @@ const Services: React.FC = () => {
   };
 
   const categoryData = getCategory();
-  const Icon = LucideIcons[
-    categoryData?.icon as keyof typeof LucideIcons
-  ] as React.ComponentType<{ className?: string }>;
+  const Icon = resolveLucideIcon(categoryData?.icon);
 
   useEffect(() => {
     if (category && categoryData) {
@@ -49,12 +47,12 @@ const Services: React.FC = () => {
       <>
         <SEO
           title="Services"
-          description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
+          description={`All services provided by the LGU of ${import.meta.env.VITE_GOVERNMENT_NAME}. Find what you need for citizenship, business, education, and more.`}
           keywords="government services, public services, local government, civic services"
         />
         <ServicesSection
           title={`All local government services`}
-          description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
+          description={`All services provided by the LGU of ${import.meta.env.VITE_GOVERNMENT_NAME}. Find what you need for citizenship, business, education, and more.`}
         />
       </>
     );

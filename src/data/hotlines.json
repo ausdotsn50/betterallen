@@ -1,0 +1,40 @@
+{
+  "hotlines": [
+    {
+      "name": "Police Station",
+      "slug": "allen-mps",
+      "icon": "ShieldAlert",
+      "number": "09164742061"
+    },
+    {
+      "name": "Fire Station",
+      "slug": "allen-bfp",
+      "icon": "Flame",
+      "number": "0951-407-6245"
+    },
+    {
+      "name": "Coast Guard",
+      "slug": "northern-samar-pcg",
+      "icon": "Ship",
+      "number": "0963-948-4388"
+    },
+    {
+      "name": "K9 Unit",
+      "slug": "k9-unit",
+      "icon": "Dog",
+      "number": "0906-278-5840"
+    },
+    {
+      "name": "MDRRMO",
+      "slug": "mdrrmo",
+      "icon": "TriangleAlert",
+      "number": "0951-616-1397"
+    },
+    {
+      "name": "Hospital",
+      "slug": "allen-district-hospital",
+      "icon": "Hospital",
+      "number": "0968-549-5394"
+    }
+  ]
+}

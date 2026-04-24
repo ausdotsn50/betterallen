@@ -7,6 +7,7 @@ import ScrollToTop from './components/ui/ScrollToTop';
 import Services from './pages/Services';
 import Document from './pages/Document';
 import Government from './pages/Government';
+import { Toaster } from './components/ui/sonner';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
               <Route path="/:lang/:documentSlug" element={<Document />} />
               <Route path="/:documentSlug" element={<Document />} />
             </Routes>
+            <Toaster position="top-right" />
             <Footer />
           </div>
         </NuqsAdapter>

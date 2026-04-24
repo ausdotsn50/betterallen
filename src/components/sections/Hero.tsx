@@ -2,11 +2,12 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
-import { POPULAR_CATEGORIES } from '../../data/popularService';
+import popularCategories from '../../data/popularService.json';
 import { useState, useEffect } from 'react';
 import { Search, ArrowRight } from 'lucide-react';
 import { serviceCategories, loadCategoryIndex } from '../../data/yamlLoader';
 import { useDebounce } from '../../hooks/useDebounce';
+import { resolveLucideIcon } from '../../lib/utils';
 
 interface SearchResult {
   title: string;
@@ -231,18 +232,21 @@ export default function Hero() {
               {t('hero.popular_services')}
             </Text>
             <div className="grid grid-cols-3 gap-2">
-              {POPULAR_CATEGORIES.map(category => (
-                <Link
-                  to={`/services/${category.slug}`}
-                  key={category.slug}
-                  className={` flex flex-col items-center justify-center p-4 rounded-lg ${category.color} transition-transform hover:scale-105 cursor-pointer`}
-                >
-                  <category.icon className="w-8 h-8 mb-2" />
-                  <Text className="text-center font-medium">
-                    {t(category.labelKey)}
-                  </Text>
-                </Link>
-              ))}
+              {popularCategories.popularCategories.map(category => {
+                const Icon = resolveLucideIcon(category.icon);
+                return (
+                  <Link
+                    to={`/services/${category.slug}`}
+                    key={category.slug}
+                    className={` flex flex-col items-center justify-center p-4 rounded-lg ${category.color} transition-transform hover:scale-105 cursor-pointer`}
+                  >
+                    <Icon className="w-8 h-8 mb-2" />
+                    <Text className="text-center font-medium">
+                      {t(category.labelKey)}
+                    </Text>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
