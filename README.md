@@ -175,7 +175,7 @@ src/
 └── types/              # TypeScript type definitions
 ```
 
-## 👥 Contributors for the BetterLGU Template
+## 👥 Contributors
 
 <a href="https://github.com/xandreiAThome/betterallen/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=xandreiAThome/betterallen" />
