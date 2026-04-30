@@ -73,3 +73,40 @@ categories:
     type: 'service'
     description: 'How to apply for housing projects, what zoning and building permits are needed, and where relocation sites are available.'
     icon: 'Home'
+
+  # Civil Registry and Vital Records Services
+  - category: 'Civil Registry'
+    slug: 'civil-registry'
+    type: 'service'
+    description: 'How to register births, marriages, deaths, and other vital records, and how to request certificates and documents from the Civil Registrar.'
+    icon: 'FileText'
+
+  # Revenue, Tax, and Property Services
+  - category: 'Tax & Revenue'
+    slug: 'tax-revenue'
+    type: 'service'
+    description: 'Where to pay taxes and fees, how to inquire about property assessments, and information about business taxes and revenue services.'
+    icon: 'DollarSign'
+
+  # Employment and Human Resource Services
+  - category: 'Employment & Jobs'
+    slug: 'employment'
+    type: 'service'
+    description: 'Job placement assistance, career counseling, employment programs, and local hiring opportunities from PESO and HRMO services.'
+    icon: 'Briefcase'
+
+  # Tourism and Culture Services
+  - category: 'Tourism & Culture'
+    slug: 'tourism'
+    type: 'service'
+    description: 'Tourist information, cultural events, heritage sites, and how to access tourism and cultural development programs.'
+    icon: 'Camera'
+
+  # Legislative and Governance Services
+  - category: 'Legislative'
+    slug: 'legislative'
+    type: 'service'
+    description: 'Information about ordinances, permits, consultations with the Sangguniang Bayan, and other legislative and governance services.'
+    icon: 'Landmark'
+
+  

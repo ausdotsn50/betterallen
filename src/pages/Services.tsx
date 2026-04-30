@@ -15,6 +15,7 @@ import { Card, CardContent } from '@bettergov/kapwa/card';
 import { Banner } from '@bettergov/kapwa/banner';
 import { useState, useEffect } from 'react';
 import { resolveLucideIcon } from '../lib/utils';
+import PageBanner from '@/components/ui/PageBanner';
 
 const Services: React.FC = () => {
   const { category } = useParams();
@@ -42,6 +43,10 @@ const Services: React.FC = () => {
     }
   }, [category, categoryData]);
 
+  const breadcrumbs = [
+    { label: 'Home', href: '/' },
+    { label: 'Services', href: '/services' },
+  ];
   if (!category) {
     return (
       <>
@@ -50,6 +55,13 @@ const Services: React.FC = () => {
           description={`All services provided by the LGU of ${import.meta.env.VITE_GOVERNMENT_NAME}. Find what you need for citizenship, business, education, and more.`}
           keywords="government services, public services, local government, civic services"
         />
+
+        <PageBanner
+          breadcrumbs={breadcrumbs}
+          title="Local Government Services"
+          description="Explore official municipal services from the Citizens Charter."
+        />
+
         <ServicesSection
           title={`All local government services`}
           description={`All services provided by the LGU of ${import.meta.env.VITE_GOVERNMENT_NAME}. Find what you need for citizenship, business, education, and more.`}

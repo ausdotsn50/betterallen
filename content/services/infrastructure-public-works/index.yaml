@@ -1,19 +1,16 @@
 # Infrastructure & Public Works Category Pages
 # This file contains all the pages/services available under the Infrastructure & Public Works category
+# Source: Engineering Office - Allen Citizen Charter
 
 pages:
-  - name: 'Report damaged roads, bridges, or drainage'
-    slug: 'report-damaged-roads-bridges-or-drainage'
-    description: 'How to report damaged infrastructure like roads, bridges, and drainage systems to your local government.'
-    
-  - name: 'Request access to barangay water supply systems'
-    slug: 'request-access-to-barangay-water-supply-systems'
-    description: 'Information about requesting access to barangay water supply systems and water connections.'
-    
-  - name: 'Use public facilities like gyms, barangay halls, or multipurpose centers'
-    slug: 'use-public-facilities-like-gyms-barangay-halls-or-multipurpose-centers'
-    description: 'How to access and use public facilities like gyms, barangay halls, and multipurpose centers.'
-    
-  - name: 'Rent stalls in public markets or use LGU-managed cemeteries'
-    slug: 'rent-stalls-in-public-markets-or-use-lgu-managed-cemeteries'
-    description: 'Information about renting stalls in public markets and using LGU-managed cemetery services.'
+  - name: 'Get an electrical and building permit or occupancy permit'
+    slug: 'get-an-electrical-and-building-permit-or-occupancy-permit'
+    description: 'Apply for an electrical and building permit or occupancy permit for construction and structural projects.'
+
+  - name: 'Get an electrical permit'
+    slug: 'get-an-electrical-permit'
+    description: 'Obtain an electrical permit for electrical installation and wiring work on your property.'
+
+  - name: 'Request a program of work'
+    slug: 'request-a-program-of-work'
+    description: 'Get the preparation and issuance of a program of work for your construction or development project.'

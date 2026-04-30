@@ -43,8 +43,11 @@ import garbageWasteDisposalIndex from '../../content/services/garbage-waste-disp
 import environmentIndex from '../../content/services/environment/index.yaml?raw';
 import disasterPreparednessIndex from '../../content/services/disaster-preparedness/index.yaml?raw';
 import housingLandUseIndex from '../../content/services/housing-land-use/index.yaml?raw';
-import governmentDepartmentsIndex from '../../content/government/departments/index.yaml?raw';
-import governmentDepartmentsLegislativeIndex from '../../content/government/departments/legislative/index.yaml?raw';
+import civilRegistryIndex from '../../content/services/civil-registry/index.yaml?raw';
+import taxRevenueIndex from '../../content/services/tax-revenue/index.yaml?raw';
+import employmentIndex from '../../content/services/employment/index.yaml?raw';
+import tourismIndex from '../../content/services/tourism/index.yaml?raw';
+import legislativeIndex from '../../content/services/legislative/index.yaml?raw';
 
 // Create a mapping of category slugs to their YAML content
 const categoryIndexMap: { [key: string]: string } = {
@@ -58,8 +61,11 @@ const categoryIndexMap: { [key: string]: string } = {
   environment: environmentIndex,
   'disaster-preparedness': disasterPreparednessIndex,
   'housing-land-use': housingLandUseIndex,
-  departments: governmentDepartmentsIndex,
-  legislative: governmentDepartmentsLegislativeIndex,
+  'civil-registry': civilRegistryIndex,
+  'tax-revenue': taxRevenueIndex,
+  employment: employmentIndex,
+  tourism: tourismIndex,
+  legislative: legislativeIndex,
 };
 
 // Parse the YAML content

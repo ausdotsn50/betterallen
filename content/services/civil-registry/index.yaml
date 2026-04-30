@@ -1,0 +1,32 @@
+# Civil Registry and Vital Records Category Pages
+# This file contains all the pages/services available under the Civil Registry and Vital Records category
+# Source: Local Civil Registrar - Allen Citizen Charter
+
+pages:
+  - name: 'Register a birth, death, or marriage document late'
+    slug: 'register-a-birth-death-or-marriage-document-late'
+    description: 'File a late registration of civil registry documents (birth, death, or marriage certificates) with the Civil Registrar.'
+
+  - name: 'Register a birth, death, or marriage document on time'
+    slug: 'register-a-birth-death-or-marriage-document-on-time'
+    description: 'Complete timely registration of civil registry documents for births, deaths, and marriages with required documentation.'
+
+  - name: 'Get a certificate or transcription of birth, death, or marriage'
+    slug: 'get-a-certificate-or-transcription-of-birth-death-or-marriage'
+    description: 'Request and obtain a certified certificate or transcription of birth, death, or marriage records from the Civil Registrar.'
+
+  - name: 'File for correction of clerical error, change of name, or change of gender'
+    slug: 'file-for-correction-of-clerical-error-change-of-name-or-change-of-gender'
+    description: 'File a petition for correction of clerical errors (CCE), change of first name (CFN), or change of gender/sex in civil registry records.'
+
+  - name: 'Process legal instruments through the Civil Registrar'
+    slug: 'process-legal-instruments-through-the-civil-registrar'
+    description: 'Submit legal instruments for processing and registration with the Civil Registrar office.'
+
+  - name: 'Register a court decree'
+    slug: 'register-a-court-decree'
+    description: 'File and register court decrees related to civil status with the Civil Registrar.'
+
+  - name: 'Get a certified photocopy or certification of registration documents'
+    slug: 'get-a-certified-photocopy-or-certification-of-registration-documents'
+    description: 'Request certified photocopies or certification of any civil registration documents from the Civil Registrar.'

@@ -1,0 +1,24 @@
+# Tourism and Culture Services Category Pages
+# This file contains all the pages/services available under the Tourism and Culture Services category
+# Source: Tourism Office - Allen Citizen Charter
+
+pages:
+  - name: 'Get tourist information services'
+    slug: 'get-tourist-information-services'
+    description: 'Access information about tourist attractions, accommodations, events, and travel services in Allen.'
+
+  - name: 'Request tourism data'
+    slug: 'request-tourism-data'
+    description: 'Submit a request for tourism-related data and statistics from the Tourism Office.'
+
+  - name: 'Apply for DOT accreditation as a tourism enterprise'
+    slug: 'apply-for-dot-accreditation-as-a-tourism-enterprise'
+    description: 'Apply for Department of Tourism (DOT) accreditation of your tourism business or enterprise.'
+
+  - name: 'Get tourism-related certifications'
+    slug: 'get-tourism-related-certifications'
+    description: 'Request the issuance of tourism-related certifications and compliance documents from the Tourism Office.'
+
+  - name: 'File a tourism-related complaint'
+    slug: 'file-a-tourism-related-complaint'
+    description: 'Report and file complaints related to tourism services and tourist experiences in Allen.'

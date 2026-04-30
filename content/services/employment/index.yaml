@@ -1,0 +1,76 @@
+# Employment and Human Resource Services Category Pages
+# This file contains all the pages/services available under the Employment and Human Resource Services category
+# Source: Public Employment Service Office and Human Resource Management Office - Allen Citizen Charter
+
+pages:
+  - name: 'Access TUPAD assistance for displaced workers'
+    slug: 'access-tupad-assistance-for-displaced-workers'
+    description: 'Apply for Tulong Panghanapbuhay sa Ating Displaced/Disadvantage Workers (TUPAD) program for employment assistance.'
+
+  - name: 'Apply for the government internship program'
+    slug: 'apply-for-the-government-internship-program'
+    description: 'Apply for the Government Internship Program (GIP) to gain work experience in local government.'
+
+  - name: 'Apply for the special program for employment of students'
+    slug: 'apply-for-the-special-program-for-employment-of-students'
+    description: 'Participate in the Special Program for Employment and Students (SPES) to work while studying.'
+
+  - name: 'Get an applicant referral letter for employment'
+    slug: 'get-an-applicant-referral-letter-for-employment'
+    description: 'Request a referral letter or application for employment from the Public Employment Service Office.'
+
+  - name: 'Apply for company accreditation'
+    slug: 'apply-for-company-accreditation'
+    description: 'Submit an application for company accreditation with the Public Employment Service Office.'
+
+  - name: 'Apply for recruitment activity approval'
+    slug: 'apply-for-recruitment-activity-approval'
+    description: 'Request approval to conduct recruitment activities for local and overseas employment.'
+
+  - name: 'Request a job posting'
+    slug: 'request-a-job-posting'
+    description: 'Submit your job vacancies for posting at the Public Employment Service Office.'
+
+  - name: 'Get employment and career coaching'
+    slug: 'get-employment-and-career-coaching'
+    description: 'Access coaching and guidance services for employment and career development from PESO.'
+
+  - name: 'Access DILP livelihood assistance'
+    slug: 'access-dilp-livelihood-assistance'
+    description: 'Apply for the DOLE Integrated Livelihood Program (DILP) for livelihood and skills training.'
+
+  - name: 'Get assistance from the OWWA help desk'
+    slug: 'get-assistance-from-the-owwa-help-desk'
+    description: 'Access services and assistance from the Overseas Workers Welfare Administration (OWWA) Help Desk.'
+
+  - name: 'Submit a job application'
+    slug: 'submit-a-job-application'
+    description: 'Submit your job application to the Human Resource Management Office.'
+
+  - name: 'Submit documents or correspondence'
+    slug: 'submit-documents-or-correspondence'
+    description: 'Submit documents, forms, or correspondence to the Human Resource Management Office.'
+
+  - name: 'Request employment verification'
+    slug: 'request-employment-verification'
+    description: 'Request verification of your employment status from the Human Resource Management Office.'
+
+  - name: 'Apply for leave'
+    slug: 'apply-for-leave'
+    description: 'Submit a leave application to the Human Resource Management Office.'
+
+  - name: 'Get a certificate of employment'
+    slug: 'get-a-certificate-of-employment'
+    description: 'Request a certificate of employment from the Human Resource Management Office.'
+
+  - name: 'Get your service record'
+    slug: 'get-your-service-record'
+    description: 'Obtain your service record from the Human Resource Management Office.'
+
+  - name: 'Get a contract of service or job contract'
+    slug: 'get-a-contract-of-service-or-job-contract'
+    description: 'Request the preparation and issuance of a contract of service or job contract from HRMO.'
+
+  - name: 'Get a certification of earned leave credits'
+    slug: 'get-a-certification-of-earned-leave-credits'
+    description: 'Request a certification of your earned leave credits from the Human Resource Management Office.'

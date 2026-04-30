@@ -1,0 +1,8 @@
+# Legislative and Governance Services Category Pages
+# This file contains all the pages/services available under the Legislative and Governance Services category
+# Source: Sangguniang Bayan Office - Allen Citizen Charter
+
+pages:
+  - name: 'Submit an ordinance or resolution for approval'
+    slug: 'submit-an-ordinance-or-resolution-for-approval'
+    description: 'Submit proposed ordinances and resolutions to the Sangguniang Bayan for review and approval.'

@@ -1,19 +1,32 @@
-# Business & Livelihood Category Pages
-# This file contains all the pages/services available under the Business & Livelihood category
+# Business Permits and Licensing Category Pages
+# This file contains all the pages/services available under the Business Permits and Licensing category
+# Source: Business Permits and Licensing Section Office - Allen Citizen Charter
 
 pages:
-  - name: "Apply for barangay clearance and mayor's business permits"
-    slug: 'apply-for-barangay-clearance-and-mayors-business-permits'
-    description: "Step-by-step guide to applying for barangay clearance and mayor's business permits for your business."
-    
-  - name: 'Renew permits and pay local business taxes'
-    slug: 'renew-permits-and-pay-local-business-taxes'
-    description: 'Information about renewing business permits and paying local business taxes to your local government.'
-    
-  - name: 'Rent stalls in public markets'
-    slug: 'rent-stalls-in-public-markets'
-    description: 'How to rent stalls in local government public markets for your business.'
-    
-  - name: 'Join trade fairs, business expos, or tourism promotions'
-    slug: 'join-trade-fairs-business-expos-or-tourism-promotions'
-    description: 'Participate in local trade fairs, business expos, and tourism promotion activities.'
+  - name: 'Secure a business permit'
+    slug: 'secure-a-business-permit'
+    description: 'Apply for a new business permit to legally operate your business in Allen.'
+
+  - name: 'Renew your business permit'
+    slug: 'renew-your-business-permit'
+    description: 'Renew your existing business permit to keep your business operation current and compliant.'
+
+  - name: 'Retire or close a business operation'
+    slug: 'retire-or-close-a-business-operation'
+    description: 'File for business retirement or closure and obtain the necessary clearances from the Business Permits and Licensing Office.'
+
+  - name: 'Amend business information and change ownership or location'
+    slug: 'amend-business-information-and-change-ownership-or-location'
+    description: 'Update business details, transfer ownership, or change your business location with the proper amendments.'
+
+  - name: 'Request a certified true copy of your business permit'
+    slug: 'request-a-certified-true-copy-of-your-business-permit'
+    description: 'Obtain certified copies of your business permit for official use or documentation purposes.'
+
+  - name: 'Get a certification of no business record'
+    slug: 'get-a-certification-of-no-business-record'
+    description: 'Receive an official certification stating that you have no existing business records in the municipality.'
+
+  - name: 'Secure an occupational permit'
+    slug: 'secure-an-occupational-permit'
+    description: 'Apply for an occupational permit for professionals and special trades requiring this license.'

@@ -1,15 +1,16 @@
 # Disaster Preparedness Category Pages
 # This file contains all the pages/services available under the Disaster Preparedness category
+# Source: Municipal Disaster Risk Reduction Management Office - Allen Citizen Charter
 
 pages:
-  - name: 'Join disaster drills and evacuation planning'
-    slug: 'join-disaster-drills-and-evacuation-planning'
-    description: 'Information about participating in disaster drills and evacuation planning activities.'
-    
-  - name: 'Learn about emergency response procedures and evacuation routes'
-    slug: 'learn-about-emergency-response-procedures-and-evacuation-routes'
-    description: 'Details about emergency response procedures and evacuation routes in your area.'
-    
-  - name: 'Access disaster preparedness information and early warning systems'
-    slug: 'access-disaster-preparedness-information-and-early-warning-systems'
-    description: 'How to access disaster preparedness information and early warning systems.'
+  - name: 'Attend disaster preparedness lectures'
+    slug: 'attend-disaster-preparedness-lectures'
+    description: 'Participate in disaster preparedness and awareness lectures offered by the municipal government.'
+
+  - name: 'Request simulation exercises and drills'
+    slug: 'request-simulation-exercises-and-drills'
+    description: 'Request the conduct of disaster simulation exercises and drills for your organization or barangay.'
+
+  - name: 'Request emergency response team assistance'
+    slug: 'request-emergency-response-team-assistance'
+    description: 'Contact the emergency response team for assistance during disasters, accidents, or emergency situations.'

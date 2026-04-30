@@ -1,19 +1,48 @@
 # Social Welfare Category Pages
 # This file contains all the pages/services available under the Social Welfare category
+# Source: Municipal Social Welfare and Development Office - Allen Citizen Charter
 
 pages:
-  - name: 'Apply for senior citizen, solo parent, or PWD assistance'
-    slug: 'apply-for-senior-citizen-solo-parent-or-pwd-assistance'
-    description: 'Information about applying for assistance programs for senior citizens, solo parents, and persons with disabilities.'
-    
-  - name: 'Receive relief goods or cash aid during disasters'
-    slug: 'receive-relief-goods-or-cash-aid-during-disasters'
-    description: 'How to access relief goods and cash assistance during natural disasters and emergencies.'
-    
-  - name: 'Join livelihood or skills training programs'
-    slug: 'join-livelihood-or-skills-training-programs'
-    description: 'Participate in livelihood and skills training programs offered by your local government.'
-    
-  - name: 'Get family and community welfare support'
-    slug: 'get-family-and-community-welfare-support'
-    description: 'Access family and community welfare support services from your local government.'
+  - name: 'Get a person with disability (PWD) identification card'
+    slug: 'get-a-person-with-disability-pwd-identification-card'
+    description: 'Apply for an official PWD ID card to access services and privileges for persons with disabilities.'
+
+  - name: 'Get a senior citizen identification card'
+    slug: 'get-a-senior-citizen-identification-card'
+    description: 'Obtain a senior citizen ID to enjoy discounts, benefits, and privileges available to seniors.'
+
+  - name: 'Get pre-marriage counseling'
+    slug: 'get-pre-marriage-counseling'
+    description: 'Participate in pre-marriage counseling programs to prepare for married life.'
+
+  - name: 'Access welfare programs for socially disadvantaged women'
+    slug: 'access-welfare-programs-for-socially-disadvantaged-women'
+    description: 'Learn about and access welfare and support programs designed for socially disadvantaged women.'
+
+  - name: 'Get a solo parent identification card'
+    slug: 'get-a-solo-parent-identification-card'
+    description: 'Obtain an official solo parent ID to qualify for support programs and government assistance.'
+
+  - name: 'Access intervention and diversion programs for children in conflict with the law'
+    slug: 'access-intervention-and-diversion-programs-for-children-in-conflict-with-the-law'
+    description: 'Access rehabilitation and diversion programs for children in conflict with the law (CICL).'
+
+  - name: 'Get care and protection for children in need of special assistance'
+    slug: 'get-care-and-protection-for-children-in-need-of-special-assistance'
+    description: 'Access care and protection services for children who are at risk or need special assistance.'
+
+  - name: 'Apply for financial assistance during crisis situations'
+    slug: 'apply-for-financial-assistance-during-crisis-situations'
+    description: 'Receive financial assistance and support if you are facing an individual crisis or emergency.'
+
+  - name: 'Get a certificate of indigency or financial assessment'
+    slug: 'get-a-certificate-of-indigency-or-financial-assessment'
+    description: 'Obtain an official certificate of indigency or financial assessment for various official purposes.'
+
+  - name: 'Request a social case study report'
+    slug: 'request-a-social-case-study-report'
+    description: 'Apply for a social case study report from the Social Welfare Office for official documentation.'
+
+  - name: 'Get referral letters to partner agencies'
+    slug: 'get-referral-letters-to-partner-agencies'
+    description: 'Receive referral letters to access services from other government agencies and partner organizations.'

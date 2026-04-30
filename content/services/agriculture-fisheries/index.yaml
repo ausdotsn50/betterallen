@@ -1,19 +1,32 @@
 # Agriculture & Fisheries Category Pages
 # This file contains all the pages/services available under the Agriculture & Fisheries category
+# Source: Municipal Agriculture Office - Allen Citizen Charter
 
 pages:
-  - name: 'Ask for free seeds, seedlings, fertilizers, or fingerlings'
-    slug: 'ask-for-free-seeds-seedlings-fertilizers-or-fingerlings'
-    description: 'How to request free agricultural inputs like seeds, seedlings, fertilizers, and fingerlings from your local government.'
-    
-  - name: 'Get veterinary services for livestock'
-    slug: 'get-veterinary-services-for-livestock'
-    description: 'Access veterinary services for your livestock and farm animals from local government veterinarians.'
-    
-  - name: 'Attend farming or fishing training'
-    slug: 'attend-farming-or-fishing-training'
-    description: 'Join training programs for farming and fishing techniques offered by your local government.'
-    
-  - name: 'Borrow farm tools or equipment from the LGU'
-    slug: 'borrow-farm-tools-or-equipment-from-the-lgu'
-    description: 'How to borrow farm tools and equipment from your local government unit.'
+  - name: 'Get technical assistance on crop production and management'
+    slug: 'get-technical-assistance-on-crop-production-and-management'
+    description: 'Access free technical assistance and guidance on crop production, management, and farming best practices.'
+
+  - name: 'Enroll in the registry system for basic sector in agriculture (RSBSA)'
+    slug: 'enroll-in-the-registry-system-for-basic-sector-in-agriculture'
+    description: 'Register in the RSBSA to get access to agricultural programs, benefits, and services from the government.'
+
+  - name: 'Get free insurance for crops, livestock, and fisheries'
+    slug: 'get-free-insurance-for-crops-livestock-and-fisheries'
+    description: 'Apply for free government insurance coverage for your crops, livestock, and fishing operations.'
+
+  - name: 'Access free inbred and hybrid seeds through RCEF'
+    slug: 'access-free-inbred-and-hybrid-seeds-through-rcef'
+    description: 'Receive free inbred and hybrid seeds from the Rural Credit and Guarantee Corporation (RCEF) program.'
+
+  - name: 'Get free vegetable seeds for backyard gardening'
+    slug: 'get-free-vegetable-seeds-for-backyard-gardening'
+    description: 'Request free vegetable seeds to start and maintain a backyard garden for your household.'
+
+  - name: 'Access support services from DA, BFAR, and partner agencies'
+    slug: 'access-support-services-from-da-bfar-and-partner-agencies'
+    description: 'Get referrals and support services from the Department of Agriculture, BFAR, and other partner agencies.'
+
+  - name: 'Get veterinary services for your farm animals'
+    slug: 'get-veterinary-services-for-your-farm-animals'
+    description: 'Avail of free or subsidized veterinary services for livestock, poultry, and other farm animals.'
