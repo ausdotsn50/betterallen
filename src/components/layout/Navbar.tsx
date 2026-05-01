@@ -247,15 +247,15 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className="sticky top-0 z-50 bg-white shadow-sm">
       {/* Top bar with hotlines */}
       <div
         className={` bg-red-600  transition-all duration-200 overflow-hidden  ${
           isScrolled ? 'max-h-0' : 'max-h-10'
         }`}
       >
-        <div className="mx-auto flex justify-end items-center h-10">
-          <div className="slideshow w-full" ref={hotlineViewportRef}>
+        <div className="flex items-center justify-end h-10 mx-auto">
+          <div className="w-full slideshow" ref={hotlineViewportRef}>
             {/* Measure the width of hotline items for scrolling effect */}
             <div className="slideshow-measure" ref={hotlineMeasureRef}>
               {hotlinesData.hotlines.map(hotline => {
@@ -264,9 +264,9 @@ const Navbar: React.FC = () => {
                   <button
                     type="button"
                     key={`measure-${hotline.slug}`}
-                    className="shrink-0 flex text-nowrap text-white text-sm bg-slate-200/20 px-2 py-1 rounded-md items-center gap-1"
+                    className="flex items-center gap-1 px-2 py-1 text-sm text-white rounded-md shrink-0 text-nowrap bg-slate-200/20"
                   >
-                    <Icon className="h-4 w-4" />
+                    <Icon className="w-4 h-4" />
                     <span>{hotline.name}: </span>
                     <span className="font-mono">{hotline.number}</span>
                   </button>
@@ -290,7 +290,7 @@ const Navbar: React.FC = () => {
                     onClick={() => copyHotlineNumber(hotline.number)}
                     className="shrink-0 flex text-nowrap text-white text-sm hover:bg-slate-200/50 hover:-translate-y-0.5 transition-all bg-slate-200/20 px-2 py-1 rounded-md items-center gap-1"
                   >
-                    <Icon className="h-4 w-4" />
+                    <Icon className="w-4 h-4" />
                     <span>{hotline.name}: </span>
                     <span className="font-mono">{hotline.number}</span>
                   </button>
@@ -307,8 +307,8 @@ const Navbar: React.FC = () => {
           isScrolled ? 'max-h-0' : 'max-h-14'
         }`}
       >
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex items-center justify-end text-white text-sm gap-4">
+        <div className="container px-4 py-2 mx-auto">
+          <div className="flex items-center justify-end gap-4 text-sm text-white">
             <div key={currentCurrencyIndex} className="animate-fade-in">
               <Text size="xs">
                 {(() => {
@@ -326,19 +326,19 @@ const Navbar: React.FC = () => {
               </Text>
             </div>
 
-            <span className="inline text-gray-500 text-xs">|</span>
+            <span className="inline text-xs text-gray-500">|</span>
             <Text size="xs" className="flex items-center gap-1">
-              <Thermometer className="h-4 w-4 inline" />{' '}
-              <span className="font-extralight text-gray-400">Allen</span>{' '}
+              <Thermometer className="inline w-4 h-4" />{' '}
+              <span className="text-gray-400 font-extralight">Allen</span>{' '}
               {temperature}°C
             </Text>
 
-            <span className="hidden sm:inline text-gray-500 text-xs">|</span>
+            <span className="hidden text-xs text-gray-500 sm:inline">|</span>
             <Text
               size="xs"
-              className="items-center gap-1 font-mono hidden sm:inline-flex"
+              className="items-center hidden gap-1 font-mono sm:inline-flex"
             >
-              <Clock className="h-3 w-3 inline" />{' '}
+              <Clock className="inline w-3 h-3" />{' '}
               {(() => {
                 const dateStr = currentTime.toLocaleString('en-US', {
                   month: 'short',
@@ -361,18 +361,18 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Main navigation */}
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+      <div className="container px-4 mx-auto">
+        <div className="flex items-center justify-between py-4">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <CheckCircle2 className="h-12 w-12 mr-3" />
+              <CheckCircle2 className="w-12 h-12 mr-3" />
               {/* <img
                 src="/ph-logo.webp"
                 alt="Philippines Coat of Arms"
-                className="h-12 w-12 mr-3"
+                className="w-12 h-12 mr-3"
               /> */}
               <div>
-                <div className="text-black font-bold">
+                <div className="font-bold text-black">
                   {import.meta.env.VITE_GOVERNMENT_NAME}
                 </div>
                 <div className="text-xs text-gray-800">
@@ -383,7 +383,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop navigation */}
-          <div className="hidden lg:flex items-center space-x-8 pr-24">
+          <div className="items-center hidden pr-24 space-x-8 lg:flex">
             {/* Main navigation items with dropdowns */}
             {mainNavigation.map(item => (
               <div key={item.label} className="relative group">
@@ -397,11 +397,11 @@ const Navbar: React.FC = () => {
                 >
                   {t(`navbar.${item.label.replace(' ', '').toLowerCase()}`)}
                   {item.children && (
-                    <ChevronDown className="ml-1 h-4 w-4 text-gray-800 group-hover:text-primary-600 transition-colors" />
+                    <ChevronDown className="w-4 h-4 ml-1 text-gray-800 transition-colors group-hover:text-primary-600" />
                   )}
                 </a>
                 {item.children && (
-                  <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="absolute left-0 z-50 invisible w-56 mt-2 transition-all duration-200 bg-white rounded-md shadow-lg opacity-0 ring-1 ring-black ring-opacity-5 group-hover:opacity-100 group-hover:visible">
                     <div
                       className="py-1"
                       role="menu"
@@ -411,7 +411,7 @@ const Navbar: React.FC = () => {
                         <Link
                           key={child.label}
                           to={child.href}
-                          className="text-left block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600"
+                          className="block px-4 py-2 text-sm text-left text-gray-700 hover:bg-primary-50 hover:text-primary-600"
                           role="menuitem"
                         >
                           {t(
@@ -426,28 +426,28 @@ const Navbar: React.FC = () => {
               </div>
             ))}
           </div>
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="items-center hidden space-x-6 lg:flex">
             <LanguageSwitcher />
 
             {/* <Link
               to="/sitemap"
-              className="flex items-center text-gray-700 hover:text-primary-600 font-medium transition-colors"
+              className="flex items-center font-medium text-gray-700 transition-colors hover:text-primary-600"
             >
               Sitemap
             </Link> */}
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center">
+          <div className="flex items-center lg:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+              className="inline-flex items-center justify-center p-2 text-gray-700 rounded-md hover:text-primary-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
+                <X className="block w-6 h-6" aria-hidden="true" />
               ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
+                <Menu className="block w-6 h-6" aria-hidden="true" />
               )}
             </button>
           </div>
@@ -456,43 +456,59 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu */}
       <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="container mx-auto px-2 pt-2 pb-4 space-y-1 border-t border-gray-200 bg-white">
+        <div className="container px-2 pt-2 pb-4 mx-auto space-y-1 bg-white border-t border-gray-200">
           {/* Main navigation items with mobile submenu */}
           {mainNavigation.map(item => (
             <div key={item.label}>
-              <button
-                onClick={() => toggleSubmenu(item.label)}
-                className={`w-full flex justify-between items-center px-4 py-2 text-base font-medium transition-colors ${
-                  isActivePage(item.href)
-                    ? 'bg-primary-50 text-primary-600'
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-primary-500'
-                }`}
-              >
-                {t(`navbar.${item.label.toLowerCase()}`)}
-                {item.children && (
-                  <ChevronDown
-                    className={`h-5 w-5 transition-transform ${
-                      activeMenu === item.label ? 'transform rotate-180' : ''
+              {item.children ? (
+                <>
+                  <button
+                    onClick={() => toggleSubmenu(item.label)}
+                    className={`w-full flex justify-between items-center px-4 py-2 text-base font-medium transition-colors ${
+                      isActivePage(item.href)
+                        ? 'bg-primary-50 text-primary-600'
+                        : 'text-gray-700 hover:bg-gray-50 hover:text-primary-500'
                     }`}
-                  />
-                )}
-              </button>
-              {/* Submenu for mobile */}
-              {item.children && activeMenu === item.label && (
-                <div className="pl-6 py-2 space-y-1 bg-gray-50">
-                  {item.children.map(child => (
-                    <Link
-                      key={child.label}
-                      to={child.href}
-                      onClick={closeMenu}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-500"
-                    >
-                      {t(`services.${child.href.split('/').pop()}.category`, {
-                        defaultValue: child.label,
-                      })}
-                    </Link>
-                  ))}
-                </div>
+                  >
+                    {t(`navbar.${item.label.toLowerCase()}`)}
+                    <ChevronDown
+                      className={`h-5 w-5 transition-transform ${
+                        activeMenu === item.label ? 'transform rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                  {activeMenu === item.label && (
+                    <div className="py-2 pl-6 space-y-1 bg-gray-50">
+                      {item.children.map(child => (
+                        <Link
+                          key={child.label}
+                          to={child.href}
+                          onClick={closeMenu}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-500"
+                        >
+                          {t(
+                            `services.${child.href.split('/').pop()}.category`,
+                            {
+                              defaultValue: child.label,
+                            }
+                          )}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <Link
+                  to={item.href}
+                  onClick={closeMenu}
+                  className={`w-full flex items-center px-4 py-2 text-base font-medium transition-colors ${
+                    isActivePage(item.href)
+                      ? 'bg-primary-50 text-primary-600'
+                      : 'text-gray-700 hover:bg-gray-50 hover:text-primary-500'
+                  }`}
+                >
+                  {t(`navbar.${item.label.toLowerCase()}`)}
+                </Link>
               )}
             </div>
           ))}

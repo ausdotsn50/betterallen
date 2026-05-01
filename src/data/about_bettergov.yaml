@@ -1,0 +1,39 @@
+# BetterGov Initiative Data
+# Non-technical contributors can edit this file to update content on the About BetterGov page.
+
+name: BetterGov
+tagline: A Better Philippine Government Website
+url: https://bettergov.ph
+
+description: >
+  BetterGov is a volunteer project by Filipinos, for Filipinos — built on the belief
+  that government information should be easy to find, easy to understand, and available
+  to everyone.
+
+mission: >
+  BetterGov exists to make government information more accessible and more human.
+  The project is open to anyone who wants to help — developers, writers, designers,
+  and everyday citizens who believe public services should work for the public.
+
+why: >
+  Good governance starts with good communication. BetterGov was created to bridge
+  the gap between government services and the people who need them — making it easier
+  for every Filipino to understand their rights, access public services, and stay
+  informed about what their government is doing.
+
+benefits:
+  - audience: For Citizens
+    icon: Users
+    description: >
+      Clear, accessible, and up-to-date government information — so any Filipino can
+      find what they need quickly, without confusion or dead ends.
+
+  - audience: For Local Governments
+    icon: Landmark
+    description: >
+      A modern, open-source model that any LGU can learn from or build on to improve
+      their own digital presence and better serve their constituents.
+
+card_description: >
+  A volunteer project by Filipinos, for Filipinos — built to make government
+  information easy to find, easy to understand, and available to everyone.

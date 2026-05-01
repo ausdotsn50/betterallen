@@ -1,0 +1,84 @@
+# Allen Municipality Data
+# Non-technical contributors can edit this file to update content on the About Allen page.
+
+name: Allen
+province: Northern Samar
+region: Eastern Visayas
+
+description: >
+  Allen is a coastal municipality in Northern Samar — the southern gateway between Luzon
+  and the Visayas, where the San Bernardino Strait narrows and every journey south begins.
+
+history: >
+  Long before the Spanish arrived, these shores were already home to Austronesian settlers,
+  who called it Minapa-a. Under Spanish colonial rule, the area was formally established as
+  a town and named La Granja, then later renamed Allen under American rule. Through every
+  change of name and ruler, the town has remained a place defined by the constant movement
+  of people and sea.
+
+geography: >
+  Allen sits at the northern tip of Samar, facing the San Bernardino Strait,
+  the natural crossing point between Luzon and the Visayas. Its 47.60 km² of
+  land spans a flat coastal shoreline that rises into rolling hills inland,
+  with 20 barangays spread along the coast and further inland.
+
+stats:
+  - label: Population
+    value: "26,527"
+    sublabel: Population (2025 Census)
+    icon: Users
+
+  - label: Barangays
+    value: "20"
+    sublabel: Administrative divisions
+    asOf: As of 2025
+    icon: MapPin
+
+  - label: Land Area
+    value: 47.60 km²
+    sublabel: Total municipal coverage
+    asOf: As of 2025
+    icon: Map
+
+  - label: Founded
+    value: Dec. 1, 1863
+    sublabel: Date of establishment
+    icon: Award
+
+timeline:
+  - year: Pre-1863
+    event: >
+      Austronesian settlers establish communities along the San Bernardino Strait,
+      sustaining themselves through fishing and inter-island trade. The area is
+      known as Minapa-a.
+
+  - year: 1863
+    event: >
+      The Spanish formally establish a town on these shores, naming it La Granja.
+      It marks the beginning of organized colonial administration in the area.
+
+  - year: 1903
+    event: >
+      American colonial rule renames the town Allen, in honor of General Henry T.
+      Allen, military governor of the Visayas. Civil governance structures are
+      reorganized under the new administration.
+
+  - year: 1942–1945
+    event: >
+      During the Japanese occupation, the town is briefly renamed Tanaman.
+      Post-war reconstruction gradually restores and reshapes the town center.
+
+  - year: 1950s–1970s
+    event: >
+      The ferry route between Allen and Matnog formalizes, cementing Allen's role
+      as the primary gateway between Luzon and the Visayas.
+
+  - year: Present
+    event: >
+      Allen continues to grow as both a transit hub and a home to over 26,000
+      residents across 20 barangays.
+
+card_description: >
+  The southern gateway between Luzon and the Visayas — a coastal municipality
+  defined by the sea, the San Bernardino Strait, and the constant movement of
+  people passing through.

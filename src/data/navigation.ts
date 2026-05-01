@@ -32,6 +32,10 @@ export const mainNavigation: NavigationItem[] = [
   {
     label: 'About',
     href: '/about',
+    children: [
+      { label: 'Allen', href: '/about/allen' },
+      { label: 'BetterGov', href: '/about/bettergov' },
+    ],
   },
 ];
 
