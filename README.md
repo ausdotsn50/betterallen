@@ -178,7 +178,7 @@ src/
 ## 👥 Contributors
 
 <a href="https://github.com/xandreiAThome/betterallen/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=xandreiAThome/betterallen" />
+  <img src="https://stg.contrib.rocks/image?repo=xandreiAThome/betterallen" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
