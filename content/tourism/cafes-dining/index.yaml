@@ -6,8 +6,8 @@ places:
     category: 'Cafes & Dining'
     categoryColor: 'bg-amber-100 text-amber-700'
     image: '/images/jamies.jpg'
-    contact: '+63 987 654 3210'
-    socialUrl: 'https://facebook.com/kapeatkain'
+    mapsUrl: 'https://maps.app.goo.gl/9aP78bBiurBymqu27'
+    socialUrl: 'https://www.facebook.com/p/Jamies-Cafe-61559833925746/'
 
   - name: "Bobby's Cafe"
     slug: 'bobbys-cafe'
@@ -37,5 +37,5 @@ places:
     categoryColor: 'bg-amber-100 text-amber-700'
     image: '/images/marias-kitchen.jpg'
     contact: '0912 236 5864'
-    mapsUrl: 'https://maps.app.goo.gl/TJH7tFAt8H5d8M7f9'
+    mapsUrl: 'https://maps.app.goo.gl/EhjHaTvLFTtfvTqw5'
     socialUrl: 'https://www.facebook.com/p/Marias-Kitchen-100063728483159/'
