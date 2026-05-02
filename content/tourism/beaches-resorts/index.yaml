@@ -5,6 +5,6 @@ places:
     barangay: 'Cabacungan'
     category: 'Beaches & Resorts'
     categoryColor: 'bg-sky-100 text-sky-700'
-    image: 'images/caba.jpg'
+    image: '/images/caba.jpg'
     mapsUrl: 'https://maps.app.goo.gl/pq4zygcsmtvFeb98A'
     featured: true
