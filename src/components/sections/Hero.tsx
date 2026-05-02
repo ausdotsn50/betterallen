@@ -60,7 +60,7 @@ export default function Hero() {
                     className={` flex flex-col items-center justify-center p-4 rounded-lg ${category.color} transition-transform hover:scale-105 cursor-pointer`}
                   >
                     <Icon className="w-8 h-8 mb-2" />
-                    <Text className="text-center font-medium">
+                    <Text className="text-center font-medium sm:text-base text-sm">
                       {t(category.labelKey)}
                     </Text>
                   </Link>

@@ -1,0 +1,65 @@
+# Tourism Data
+# This file contains all the tourism categories for the government portal
+# Each category's index.yaml file is automatically located at content/tourism/{slug}/index.yaml
+# Non-technical users can easily edit this file to add, remove, or modify tourism categories
+
+categories:
+  # Beaches and Resorts
+  - category: 'Beaches and Resorts'
+    slug: 'beaches-resorts'
+    description: 'Discover the pristine beaches and luxury resorts that make Allen a coastal paradise.'
+    icon: 'Waves'
+    color:
+      bg: 'bg-cyan-100'
+      text: 'text-cyan-600'
+      border: 'border-cyan-500'
+
+  # Cafes and Dining
+  - category: 'Cafes and Dining'
+    slug: 'cafes-dining'
+    description: 'Explore local cafes, restaurants, and dining spots offering delicious local and international cuisine.'
+    icon: 'Coffee'
+    color:
+      bg: 'bg-amber-100'
+      text: 'text-amber-600'
+      border: 'border-amber-500'
+
+  # Hotels and Lodging
+  - category: 'Hotels and Lodging'
+    slug: 'hotels-lodging'
+    description: 'Find comfortable accommodations ranging from budget-friendly inns to luxury hotels.'
+    icon: 'Hotel'
+    color:
+      bg: 'bg-blue-100'
+      text: 'text-blue-600'
+      border: 'border-blue-500'
+
+  # Nature and Outdoor Spots
+  - category: 'Nature and Outdoor Spots'
+    slug: 'nature-outdoor'
+    description: 'Experience the natural beauty of Allen through its parks, mountains, and outdoor attractions.'
+    icon: 'Mountain'
+    color:
+      bg: 'bg-green-100'
+      text: 'text-green-600'
+      border: 'border-green-500'
+
+  # Cultural and Heritage Sites
+  - category: 'Cultural and Heritage Sites'
+    slug: 'cultural-heritage'
+    description: "Visit historical landmarks and cultural sites that showcase Allen's rich heritage."
+    icon: 'Landmark'
+    color:
+      bg: 'bg-purple-100'
+      text: 'text-purple-600'
+      border: 'border-purple-500'
+
+  # Activities and Recreation
+  - category: 'Activities and Recreation'
+    slug: 'activities-recreation'
+    description: 'Enjoy various recreational activities and entertainment options available in Allen.'
+    icon: 'Bike'
+    color:
+      bg: 'bg-orange-100'
+      text: 'text-orange-600'
+      border: 'border-orange-500'

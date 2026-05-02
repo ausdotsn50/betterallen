@@ -30,6 +30,10 @@ export const mainNavigation: NavigationItem[] = [
     href: '/government/departments',
   },
   {
+    label: 'Tourism',
+    href: '/tourism',
+  },
+  {
     label: 'About',
     href: '/about',
     children: [

@@ -1,0 +1,10 @@
+places:
+  - name: 'Gabaldon Ruins'
+    slug: 'allen-heritage-museum'
+    description: "A historical school building ruin built during the American colonial era. Located in the Municipality's elementary school."
+    barangay: 'Poblacion'
+    category: 'Cultural Heritage'
+    categoryColor: 'bg-rose-100 text-rose-700'
+    image: '/images/gabaldon.jpg'
+    mapsUrl: 'https://maps.app.goo.gl/j2HRLM19esqtssXS9'
+    featured: true

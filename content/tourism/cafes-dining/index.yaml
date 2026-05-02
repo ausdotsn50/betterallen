@@ -1,0 +1,41 @@
+places:
+  - name: "Jamie's Cafe"
+    slug: 'jamies-kain'
+    description: 'A cozy local cafe coffee and homemade pastries.'
+    barangay: 'Sabang II'
+    category: 'Cafes & Dining'
+    categoryColor: 'bg-amber-100 text-amber-700'
+    image: '/images/jamies.jpg'
+    contact: '+63 987 654 3210'
+    socialUrl: 'https://facebook.com/kapeatkain'
+
+  - name: "Bobby's Cafe"
+    slug: 'bobbys-cafe'
+    description: 'Open-air cafe, dine and drink while experiencing scenic views.'
+    barangay: 'Sabang II'
+    category: 'Cafes & Dining'
+    categoryColor: 'bg-amber-100 text-amber-700'
+    image: 'https://static2.menufyy.com/bobbys-cafe-albums-1.jpg'
+    mapsUrl: 'https://maps.app.goo.gl/DaNgu8E1sxjDAgaA6'
+    socialUrl: 'https://www.facebook.com/bobbyscafe23/'
+    contact: '0928 370 7051'
+
+  - name: "Maria's Garden"
+    slug: 'marias-garden'
+    description: 'Dine and eat with nature, enjoy the cozy atmosphere and artful decor.'
+    barangay: 'Sabang II'
+    category: 'Cafes & Dining'
+    categoryColor: 'bg-amber-100 text-amber-700'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToCDrNN4sowisCBSxX8AVmkoRwRI3D28NMXw&s'
+    mapsUrl: 'https://maps.app.goo.gl/oUP6QfykXJCEcZNaA'
+
+  - name: "Maria's Kitchen"
+    slug: 'marias-kitchen'
+    description: 'Dine by the ocean view with cozy decor and .'
+    barangay: 'Kinabranan I'
+    category: 'Cafes & Dining'
+    categoryColor: 'bg-amber-100 text-amber-700'
+    image: '/images/marias-kitchen.jpg'
+    contact: '0912 236 5864'
+    mapsUrl: 'https://maps.app.goo.gl/TJH7tFAt8H5d8M7f9'
+    socialUrl: 'https://www.facebook.com/p/Marias-Kitchen-100063728483159/'

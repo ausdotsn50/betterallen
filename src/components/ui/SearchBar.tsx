@@ -121,7 +121,7 @@ const SearchBar = ({
                 t('hero.search_placeholder') ||
                 'Search services...'
               }
-              className="h-14 w-full rounded-full border-0 bg-transparent pl-14 pr-5 text-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-white/40"
+              className="h-14 rounded-full border-0 bg-transparent  text-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-white/40"
             />
           </div>
         ) : (
@@ -137,7 +137,7 @@ const SearchBar = ({
                 t('hero.search_placeholder') ||
                 'Search services...'
               }
-              className="text-black flex-1 rounded-l-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-600"
+              className="text-black min-w-0 flex-1 rounded-l-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-600"
             />
             <button
               type="button"

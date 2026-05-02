@@ -7,6 +7,7 @@ import ScrollToTop from './components/ui/ScrollToTop';
 import Services from './pages/Services';
 import Document from './pages/Document';
 import Government from './pages/Government';
+import Tourism from './pages/Tourism';
 import { Toaster } from './components/ui/sonner';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './pages/about'; // the index.tsx
@@ -31,6 +32,8 @@ function App() {
               />
               <Route path="/government/:category" element={<Government />} />
               <Route path="/government" element={<Government />} />
+              <Route path="/tourism/:category" element={<Tourism />} />
+              <Route path="/tourism" element={<Tourism />} />
               <Route
                 path="/government/:category/:documentSlug"
                 element={<Document categoryType="government" />}

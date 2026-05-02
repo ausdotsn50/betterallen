@@ -4,7 +4,7 @@ export function Text({
   className = '',
   children,
 }: {
-  size?: 'xs' | 'sm' | 'md' | 'lg';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   transform?: 'none' | 'uppercase' | 'lowercase';
   className?: string;
   children: React.ReactNode;

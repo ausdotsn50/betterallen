@@ -212,7 +212,7 @@ export default function Document({
         }
         keywords={`${documentSlug}, government services, public services, local government`}
       />
-      <Section className="p-3 mb-12">
+      <Section className="p-3 mb-12" maxWidth="7xl">
         <Breadcrumbs className="mb-8" items={breadcrumbs} />
         <Card className="mb-8 markdown-content">
           <CardHeader>

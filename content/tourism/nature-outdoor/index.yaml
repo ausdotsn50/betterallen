@@ -1,0 +1,10 @@
+places:
+  - name: 'Imaga Rock Formation'
+    slug: 'imaga-rock-formation'
+    description: 'A unique rugged cliff by the shore, with a viewing platform at the top'
+    barangay: 'Cabacungan'
+    category: 'Nature & Outdoor'
+    categoryColor: 'bg-emerald-100 text-emerald-700'
+    mapsUrl: 'https://maps.app.goo.gl/4AGktifVqS2PX6DQ6'
+    image: '/images/imaga-rock.jpg'
+    featured: true
