@@ -8,3 +8,67 @@ places:
     image: '/images/caba.jpg'
     mapsUrl: 'https://maps.app.goo.gl/pq4zygcsmtvFeb98A'
     featured: true
+  
+  # Birmingham as resort than lodging
+  - name: 'Birmingham Allen Resort'
+    slug: 'birmingham-hotel'
+    description: 'A hotel resort in the heart of Allen. Offering scenice views, comfortable rooms and excellent service.'
+    barangay: 'Kinabranan II'
+    category: 'Hotels & Lodging'
+    categoryColor: 'bg-sky-100 text-sky-700'
+    image: '/images/birmingham.jpg'
+    mapsUrl: 'https://maps.app.goo.gl/rCpUBDLDgiyLdfjV9'
+    contact: '0966 185 3693'
+    socialUrl: 'https://www.facebook.com/BirminghamAllenResort/'
+
+  - name: 'UMA'
+    slug: 'uma'
+    description: 'An enchanting oasis blending modern luxury with lush tropical surroundings and serene retreats.'
+    barangay: 'Kinabranan I'
+    category: 'Beaches & Resorts'
+    categoryColor: 'bg-sky-100 text-sky-700'
+    image: '/images/uma.jpg'
+    mapsUrl: 'https://maps.app.goo.gl/D3n23Vnzn8SCnw356'
+    contact: '0929 293 9152'
+    socialUrl: 'https://www.facebook.com/profile.php?id=61559256478311'
+  
+  - name: 'Domina Andrea Beach Club'
+    slug: 'domina-andrea-beach-club'
+    description: 'A tropical beach club offering a serene paradise escape along the Northern Samar coast.'
+    barangay: 'Cabacungan'
+    category: 'Beaches & Resorts'
+    categoryColor: 'bg-sky-100 text-sky-700'
+    image: '/images/domina-andrea.jpg'
+    mapsUrl: 'https://maps.app.goo.gl/xyTTHjLQd5G1XUQg7'
+    contact: '0969 169 4275'
+    socialUrl: 'https://www.facebook.com/dominaandrea.ph'
+
+  - name: 'Imaga Rest House'
+    slug: 'imaga-rest-house'
+    description: 'A peaceful haven offering tranquil seaside views, gentle breezes, and a restful escape.'
+    barangay: 'Cabacungan'
+    category: 'Beaches & Resorts'
+    categoryColor: 'bg-sky-100 text-sky-700'
+    image: '/images/imaga-rest-house.jpg'
+    mapsUrl: 'https://maps.app.goo.gl/gQ5C3c3MXMJCUhZZ6'
+    socialUrl: 'https://www.facebook.com/profile.php?id=100085073379387'
+  
+  - name: Ba’ Tonying Beach Resort
+    slug: ba-tonying-beach-resort
+    description: A private waterfront resort featuring iconic sunsets, scenic rock outcrops, and delicious home-cooked meals.
+    barangay: 'Cabacungan'
+    category: 'Beaches & Resorts'
+    categoryColor: 'bg-sky-100 text-sky-700'
+    image: '/images/ba-tonying.jpg'
+    mapsUrl: 'https://maps.app.goo.gl/Ld6UKkTgu9mN1ZbPA'
+    socialUrl: 'https://www.facebook.com/profile.php?id=100089671098646'
+  
+  - name: Bantayan Resort
+    slug: bantayan-resort
+    description: A raw, untouched clifftop retreat where dramatic rock formations meet the sea.
+    barangay: 'Tasvilla'
+    category: 'Beaches & Resorts'
+    categoryColor: 'bg-sky-100 text-sky-700'
+    image: '/images/bantayan.jpg'
+    mapsUrl: 'https://maps.app.goo.gl/6v6jvhzWCgameMoT7'
+
