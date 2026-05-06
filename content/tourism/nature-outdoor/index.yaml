@@ -17,7 +17,7 @@ places:
     mapsUrl: https://maps.app.goo.gl/aE66KaU68qwJgWed8'
     image: '/images/tarangban-peak.jpg'
     featured: true
-  
+
   - name: 'Tarangban Peak'
     slug: 'tarangban-peak'
     description: 'A rewarding hiking destination with a breathtaking top-view panorama.'

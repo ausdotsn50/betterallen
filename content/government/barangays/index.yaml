@@ -1,0 +1,317 @@
+- slug: barangay-alejandro
+  barangay_name: ALEJANDRO
+  address: null
+  trunkline:
+    - '09168343951'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Jocelyn B. Cadayong
+      contact: '09168343951'
+      email: null
+    - role: SK Chairperson
+      name: Vincent Karl M. Sytico
+      contact: '09388295977'
+      email: syticovincentkarl@gmail.com
+
+- slug: barangay-bonifacio
+  barangay_name: BONIFACIO
+  address: null
+  trunkline:
+    - '09518205119'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Rommel Dineros
+      contact: '09518205119'
+      email: null
+    - role: SK Chairperson
+      name: null
+      contact: null
+      email: null
+
+- slug: barangay-cabacungan
+  barangay_name: CABACUNGAN
+  address: null
+  trunkline:
+    - '09052504112'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Julian G. Cajandab
+      contact: '09052504112'
+      email: juliancajandab1210@gmail.com
+    - role: SK Chairperson
+      name: Arnold Gubat Ombrog
+      contact: '09631856222'
+      email: ombrog.a0802@gmail.com
+
+- slug: barangay-calarayan
+  barangay_name: CALARAYAN
+  address: null
+  trunkline:
+    - '09368200552'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Pedro G. Galino
+      contact: '09368200552'
+      email: null
+    - role: SK Chairperson
+      name: null
+      contact: null
+      email: null
+
+- slug: barangay-frederick
+  barangay_name: FREDERICK
+  address: null
+  trunkline:
+    - '09773615741'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Raul E. Florano
+      contact: '09773615741'
+      email: Floranoraul559@gmail.com
+    - role: SK Chairperson
+      name: Janine C. Esteves
+      contact: '09856206164'
+      email: Cainghogestevesjanine@gmail.com
+
+- slug: barangay-guinarawayan
+  barangay_name: GUINARAWAYAN
+  address: null
+  trunkline:
+    - '09307620031'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Christine Mendoza Puaso
+      contact: '09307620031'
+      email: puasochristine2@gmail.com
+    - role: SK Chairperson
+      name: Ali G. Puaso
+      contact: '09619059652'
+      email: alipuaso4@gmail.com
+
+- slug: barangay-imelda
+  barangay_name: IMELDA
+  address: null
+  trunkline:
+    - '09486095567'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Joy F. Porio
+      contact: '09486095567'
+      email: null
+    - role: SK Chairperson
+      name: Divine P. Gerero
+      contact: '09305541899'
+      email: devinegerero04@gmail.com
+
+- slug: barangay-jubasan
+  barangay_name: JUBASAN
+  address: null
+  trunkline:
+    - '09056932793'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Manolito F. Gubat Jr.
+      contact: '09056932793'
+      email: manolitofgubat@gmail.com
+    - role: SK Chairperson
+      name: null
+      contact: null
+      email: null
+
+- slug: barangay-kinabranan-i
+  barangay_name: KINABRANAN I
+  address: null
+  trunkline:
+    - '0967 809 5216'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Luz J. Jamoralin
+      contact: '0967 809 5216'
+      email: null
+    - role: SK Chairperson
+      name: Nomeriano III O. Diaz
+      contact: '09561653315'
+      email: Nomerdiaz8@gmail.com
+
+- slug: barangay-kinabranan-ii
+  barangay_name: KINABRANAN II
+  address: null
+  trunkline:
+    - '09284732697'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Joel V. Grande
+      contact: '09284732697'
+      email: Brgykinabrananzoneii@gmail.com
+    - role: SK Chairperson
+      name: Paul Gigantana
+      contact: '09694895788'
+      email: paulgiganta08@gmail.com
+
+- slug: barangay-kinagiutman
+  barangay_name: KINAGIUTMAN
+  address: null
+  trunkline:
+    - '09307254420'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Alfonso M. Rarela Jr.
+      contact: '09307254420'
+      email: rfloralde1997@gmail.com
+    - role: SK Chairperson
+      name: Emmanuel Galaroza
+      contact: '09624990417'
+      email: emmangalaroza@gmail.com
+
+- slug: barangay-lagundi
+  barangay_name: LAGUNDI
+  address: null
+  trunkline:
+    - '09488083291'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Maximo L. Carlon Jr.
+      contact: '09488083291'
+      email: null
+    - role: SK Chairperson
+      name: Kent Leo G. Lim
+      contact: '09397580075'
+      email: null
+
+- slug: barangay-lipata
+  barangay_name: LIPATA
+  address: null
+  trunkline:
+    - '09453068819'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Rowena Lebria Rustia
+      contact: '09453068819'
+      email: rowenarustia1969@gmail.com
+    - role: SK Chairperson
+      name: Ralph B. Presado
+      contact: '09092472407'
+      email: ralphbogtong@gmail.com
+
+- slug: barangay-lo-oc
+  barangay_name: LO-OC
+  address: null
+  trunkline:
+    - '09813723805'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: James Rodolfo D. Suan
+      contact: '09813723805'
+      email: null
+    - role: SK Chairperson
+      name: Jeany Rose Vetonio
+      contact: '09542656677'
+      email: vetoniojeanyrose52@gmail.com
+
+- slug: barangay-londres
+  barangay_name: LONDRES
+  address: null
+  trunkline: null
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Bernadette Pragacha
+      contact: null
+      email: null
+    - role: SK Chairperson
+      name: null
+      contact: null
+      email: null
+
+- slug: barangay-sabang-i
+  barangay_name: SABANG I
+  address: null
+  trunkline:
+    - '09674350111'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Alexander L. Suan
+      contact: '09674350111'
+      email: null
+    - role: SK Chairperson
+      name: null
+      contact: null
+      email: null
+
+- slug: barangay-sabang-ii
+  barangay_name: SABANG II
+  address: null
+  trunkline:
+    - '0917-598-1973'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Arturo Tobes Dubongco Jr.
+      contact: '09175981973'
+      email: null
+    - role: SK Chairperson
+      name: Winona Kyla Suan Galaroza
+      contact: '09062218100'
+      email: null
+
+- slug: barangay-santa-rita
+  barangay_name: SANTA RITA
+  address: null
+  trunkline:
+    - '09383879783'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Renato D. Cula
+      contact: '09383879783'
+      email: null
+    - role: SK Chairperson
+      name: Jessa Mae G. Cula
+      contact: '09648669912'
+      email: jessamaecula0@gmail.com
+
+- slug: barangay-tasvilla
+  barangay_name: TASVILLA
+  address: null
+  trunkline:
+    - '09164523808'
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: Benigno B. Floralde Sr.
+      contact: '09164523808'
+      email: null
+    - role: SK Chairperson
+      name: null
+      contact: null
+      email: null
+
+- slug: barangay-victoria
+  barangay_name: VICTORIA
+  address: null
+  trunkline: null
+  website: null
+  officials:
+    - role: Punong Barangay
+      name: null
+      contact: null
+      email: null
+    - role: SK Chairperson
+      name: Mark Floyd S. Are
+      contact: '09510211725'
+      email: markfloydare3@gmail.com
