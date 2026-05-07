@@ -371,8 +371,8 @@ const Navbar: React.FC = () => {
             {/* Main navigation items with dropdowns */}
             {mainNavigation.map(item => (
               <div key={item.label} className="relative group">
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className={`flex items-center font-medium transition-colors ${
                     isActivePage(item.href)
                       ? 'text-primary-600 border-b-2 border-primary-600'
@@ -383,7 +383,7 @@ const Navbar: React.FC = () => {
                   {item.children && (
                     <ChevronDown className="w-4 h-4 ml-1 text-gray-800 transition-colors group-hover:text-primary-600" />
                   )}
-                </a>
+                </Link>
                 {item.children && (
                   <div className="absolute left-0 z-50 invisible w-56 mt-2 transition-all duration-200 bg-white rounded-md shadow-lg opacity-0 ring-1 ring-black ring-opacity-5 group-hover:opacity-100 group-hover:visible">
                     <div
