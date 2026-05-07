@@ -1,5 +1,6 @@
 import type { NavigationItem } from '../types';
 import { serviceCategories as servicesData } from './yamlLoader';
+import popularServices from './popularService.json';
 import { governmentCategories as governmentData } from './yamlLoader';
 
 interface Subcategory {
@@ -11,6 +12,14 @@ interface Category {
   category: string;
   slug: string;
   subcategories: Subcategory[];
+}
+
+interface PopularCategory {
+  labelKey: string;
+  label: string;
+  slug: string;
+  icon: string;
+  color: string;
 }
 
 export const mainNavigation: NavigationItem[] = [
@@ -39,6 +48,10 @@ export const mainNavigation: NavigationItem[] = [
     href: '/tourism',
   },
   {
+    label: 'Contact',
+    href: '/contact',
+  },
+  {
     label: 'About',
     href: '/about',
     children: [
@@ -56,19 +69,18 @@ export const footerNavigation = {
         { label: 'About the Portal', href: '/about' },
         // { label: 'Privacy Policy', href: '/privacy' },
         // { label: 'Terms of Use', href: '/terms' },
-        { label: 'Accessibility', href: '/accessibility' },
-        { label: 'Contact Us', href: '/about' },
-        { label: 'Community Discord', href: '/discord' },
+        { label: 'Contact Us', href: '/contact' },
+        { label: 'Community Discord', href: 'https://discord.gg/mHtThpN8bT' },
       ],
     },
     {
       title: 'Services',
       links: [
         { label: 'All Services', href: '/services' },
-        ...(servicesData.categories as Category[])
+        ...(popularServices.popularCategories as PopularCategory[])
           .slice(0, 6)
           .map(category => ({
-            label: category.category,
+            label: category.labelKey,
             href: `/services/${category.slug}`,
           })),
         { label: 'Hotlines', href: '/philippines/hotlines' },

@@ -26,14 +26,14 @@ export function PageHero({
   metadata?: ReactNode;
 }) {
   return (
-    <header className='animate-in fade-in flex flex-col justify-center py-8 text-center duration-700 md:py-12'>
+    <header className="animate-in fade-in flex flex-col justify-center py-8 text-center duration-700 md:py-12">
       {breadcrumb && breadcrumb.length > 0 && (
-        <nav className='mb-4' aria-label='Breadcrumb'>
-          <ol className='flex items-center justify-center gap-2 text-sm'>
+        <nav className="mb-4" aria-label="Breadcrumb">
+          <ol className="flex items-center justify-center gap-2 text-sm">
             {breadcrumb.map((crumb, index) => (
-              <li key={crumb.href} className='flex items-center gap-2'>
+              <li key={crumb.href} className="flex items-center gap-2">
                 {index > 0 && (
-                  <span className='text-kapwa-text-weak' aria-hidden='true'>
+                  <span className="text-kapwa-text-weak" aria-hidden="true">
                     /
                   </span>
                 )}
@@ -55,20 +55,20 @@ export function PageHero({
           </ol>
         </nav>
       )}
-      <h1 className='text-kapwa-text-strong mb-4 kapwa-heading-xl font-bold tracking-tight'>
+      <h1 className="text-kapwa-text-strong mb-4 kapwa-heading-xl font-bold tracking-tight">
         {title}
       </h1>
       {description && (
-        <p className='text-kapwa-text-on-disabled mx-auto max-w-2xl text-sm leading-relaxed md:text-base'>
+        <p className="text-kapwa-text-on-disabled mx-auto max-w-2xl text-sm leading-relaxed md:text-base">
           {description}
         </p>
       )}
       {metadata && (
-        <div className='mt-4 flex items-center justify-center gap-3'>
+        <div className="mt-4 flex items-center justify-center gap-3">
           {metadata}
         </div>
       )}
-      {children && <div className='mt-8'>{children}</div>}
+      {children && <div className="mt-8">{children}</div>}
     </header>
   );
 }
@@ -87,20 +87,20 @@ export function ModuleHeader({
   children?: ReactNode;
 }) {
   return (
-    <div className='border-kapwa-border-weak mb-8 border-b pb-6'>
-      <div className='flex flex-col justify-between gap-4 md:flex-row md:items-end'>
-        <div className='max-w-2xl'>
-          <h2 className='text-kapwa-text-strong kapwa-heading-lg font-extrabold tracking-tight'>
+    <div className="border-kapwa-border-weak mb-8 border-b pb-6">
+      <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+        <div className="max-w-2xl">
+          <h2 className="text-kapwa-text-strong kapwa-heading-lg font-extrabold tracking-tight">
             {title}
           </h2>
           {description && (
-            <p className='text-kapwa-text-disabled mt-1 text-sm md:text-base'>
+            <p className="text-kapwa-text-disabled mt-1 text-sm md:text-base">
               {description}
             </p>
           )}
         </div>
         {children && (
-          <div className='w-full shrink-0 md:w-auto'>{children}</div>
+          <div className="w-full shrink-0 md:w-auto">{children}</div>
         )}
       </div>
     </div>
@@ -149,12 +149,12 @@ export function DetailSection({
           'flex items-center gap-2 border-b px-6 py-4'
         )}
       >
-        {Icon && <Icon className='text-kapwa-text-brand h-4 w-4' />}
-        <div className='text-kapwa-text-disabled flex flex-1 items-center justify-between text-[10px] font-bold tracking-widest uppercase'>
+        {Icon && <Icon className="text-kapwa-text-brand h-4 w-4" />}
+        <div className="text-kapwa-text-disabled flex flex-1 items-center justify-between text-[10px] font-bold tracking-widest uppercase">
           {title}
         </div>
       </div>
-      <div className='p-6'>{children}</div>
+      <div className="p-6">{children}</div>
     </section>
   );
 }

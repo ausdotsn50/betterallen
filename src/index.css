@@ -12,38 +12,38 @@
 @theme {
   --font-serif: Georgia, 'Times New Roman', serif;
 
-  --color-primary-50: #e6f0fd;
-  --color-primary-100: #cce0fb;
-  --color-primary-200: #99c2f7;
-  --color-primary-300: #66a3f3;
-  --color-primary-400: #3385ef;
-  --color-primary-500: #0066eb;
-  --color-primary-600: #0052bc;
-  --color-primary-700: #003d8d;
-  --color-primary-800: #00295e;
-  --color-primary-900: #00142f;
+  --color-primary-50: #e0f4fb;
+  --color-primary-100: #aaddf4;
+  --color-primary-200: #6ec3ec;
+  --color-primary-300: #36a8e0;
+  --color-primary-400: #138fd0;
+  --color-primary-500: #0a75b8;
+  --color-primary-600: #085e9a;
+  --color-primary-700: #064a7a;
+  --color-primary-800: #04375c;
+  --color-primary-900: #022540;
 
-  --color-secondary-50: #ffede6;
-  --color-secondary-100: #ffdbcc;
-  --color-secondary-200: #ffb799;
-  --color-secondary-300: #ff9466;
-  --color-secondary-400: #ff7033;
-  --color-secondary-500: #ff4d00;
-  --color-secondary-600: #cc3e00;
-  --color-secondary-700: #992e00;
-  --color-secondary-800: #661f00;
-  --color-secondary-900: #330f00;
+  --color-secondary-50: #fde8f2;
+  --color-secondary-100: #fac8e1;
+  --color-secondary-200: #f59abf;
+  --color-secondary-300: #ee6d9d;
+  --color-secondary-400: #e44d84;
+  --color-secondary-500: #d63070;
+  --color-secondary-600: #bb1b58;
+  --color-secondary-700: #951445;
+  --color-secondary-800: #6e0f34;
+  --color-secondary-900: #470b21;
 
-  --color-accent-50: #fef3e6;
-  --color-accent-100: #fde7cc;
-  --color-accent-200: #fbd099;
-  --color-accent-300: #f9b866;
-  --color-accent-400: #f7a133;
-  --color-accent-500: #f58900;
-  --color-accent-600: #c46e00;
-  --color-accent-700: #935200;
-  --color-accent-800: #623700;
-  --color-accent-900: #311b00;
+  --color-accent-50: #470b21;
+  --color-accent-100: #d3c5f1;
+  --color-accent-200: #b69ee7;
+  --color-accent-300: #9a79dd;
+  --color-accent-400: #825cd1;
+  --color-accent-500: #6e45bf;
+  --color-accent-600: #5a31a8;
+  --color-accent-700: #47268a;
+  --color-accent-800: #341b6a;
+  --color-accent-900: #211148;
 
   --color-success-50: #e6f7ef;
   --color-success-100: #ccefdf;
@@ -300,7 +300,7 @@
 
   .slideshow-track.is-animated {
     width: max-content;
-    animation: slideshow 18s linear infinite;
+    animation: slideshow 26s linear infinite;
   }
 
   .slideshow:hover .slideshow-track.is-animated {

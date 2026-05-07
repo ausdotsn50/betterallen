@@ -6,7 +6,6 @@ import {
   tourismCategories,
   getTourismPlaces,
   getFeaturedPlaces,
-  type Place,
 } from '../data/tourismLoader';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import SEO from '../components/SEO';
@@ -23,8 +22,6 @@ const heroImages = getFeaturedPlaces().map(p => p.image);
 
 const Tourism: React.FC = () => {
   const { category } = useParams();
-  const [places, setPlaces] = useState<Place[]>([]);
-  const [loading, setLoading] = useState(false);
   const [heroIndex, setHeroIndex] = useState(0);
 
   useEffect(() => {
@@ -43,15 +40,7 @@ const Tourism: React.FC = () => {
   const categoryData = getCategory();
   const Icon = resolveLucideIcon(categoryData?.icon);
 
-  useEffect(() => {
-    if (category && categoryData) {
-      setLoading(true);
-      getTourismPlaces(category)
-        .then(setPlaces)
-        .catch(console.error)
-        .finally(() => setLoading(false));
-    }
-  }, [category, categoryData]);
+  const places = category && categoryData ? getTourismPlaces(category) : [];
 
   if (!category) {
     return (
@@ -61,7 +50,10 @@ const Tourism: React.FC = () => {
           description={`Discover the best tourist spots, accommodations, and attractions in ${import.meta.env.VITE_GOVERNMENT_NAME}. Beaches, resorts, cafes, hotels, and more.`}
           keywords="tourism, travel, beaches, resorts, hotels, dining, attractions, tourist spots"
         />
-        <section className="relative overflow-hidden bg-primary-700 text-white py-16">
+        <section
+          className="relative overflow-hidden text-white py-16"
+          aria-label="Tourism hero"
+        >
           {heroImages.map((src, i) => (
             <div
               key={src}
@@ -70,26 +62,30 @@ const Tourism: React.FC = () => {
                 backgroundImage: `url(${src})`,
                 opacity: i === heroIndex ? 1 : 0,
               }}
+              aria-hidden="true"
             />
           ))}
-          <div className="absolute inset-0 bg-primary-900/65" />
-          <div className="relative z-10 max-w-full mx-auto sm:px-6 px-4">
+          <div
+            className="absolute inset-0 bg-primary-900/65"
+            aria-hidden="true"
+          />
+          <div className="relative z-10 max-w-384 mx-auto sm:px-6 px-4">
             <Heading
               level={5}
               className="text-primary-200 inline-flex items-center gap-2 uppercase tracking-wide font-medium -mb-6"
             >
-              <MapPin />
+              <MapPin aria-hidden="true" />
               Allen, Northern Samar
             </Heading>
-            <Heading className="tracking-wide">Tourism</Heading>
+            <Heading className="tracking-wide mb-6">Tourism</Heading>
             <Heading level={3} className="text-primary-100 -mt-4">
               "The Gateway of Eastern Visayas"
             </Heading>
-            <p className="text-primary-100 md:text-xl text-base max-w-xl mb-6">
+            <Text className="text-primary-100 md:text-xl text-base max-w-xl mb-6">
               Discover the Gateway to the Samar Island, where stunning coastal
               rock formations and beaches meet the warm hospitality of a vibrant
               port town.
-            </p>
+            </Text>
 
             <div className="mb-6 flex gap-4">
               <div className="px-4 py-1 font-bold bg-primary-600 border-primary-100/20 w-fit border rounded-4xl text-sm">
@@ -100,15 +96,21 @@ const Tourism: React.FC = () => {
               </div>
             </div>
 
-            <Link to="https://www.facebook.com/allensamartourism/">
-              <Button
-                variant={'link'}
-                className="bg-white text-primary-700 text-base sm:text-lg px-6 py-6 font-semibold cursor-pointer"
+            <Button
+              asChild
+              variant="link"
+              className="bg-white text-primary-700 text-base sm:text-lg px-6 py-6 font-semibold cursor-pointer"
+            >
+              <a
+                href="https://www.facebook.com/allensamartourism/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Allen Tourism on Facebook"
               >
-                <FiFacebook />
+                <FiFacebook aria-hidden="true" />
                 Follow @allensamartourism
-              </Button>{' '}
-            </Link>
+              </a>
+            </Button>
           </div>
         </section>
 
@@ -128,7 +130,11 @@ const Tourism: React.FC = () => {
               {tourismCategories.categories.map(cat => {
                 const CatIcon = resolveLucideIcon(cat.icon);
                 return (
-                  <Link key={cat.slug} to={`/tourism/${cat.slug}`}>
+                  <Link
+                    key={cat.slug}
+                    to={`/tourism/${cat.slug}`}
+                    aria-label={`Browse ${cat.category} tourism places`}
+                  >
                     <Card
                       hoverable
                       className={`h-full border-t-4 ${cat.color.border}`}
@@ -136,15 +142,19 @@ const Tourism: React.FC = () => {
                       <CardContent>
                         <div
                           className={`${cat.color.bg} ${cat.color.text} p-3 rounded-md mb-4 w-fit`}
+                          aria-hidden="true"
                         >
-                          <CatIcon className="h-6 w-6" />
+                          <CatIcon className="h-6 w-6" aria-hidden="true" />
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                        <Heading
+                          level={5}
+                          className="font-semibold text-gray-900 mb-2"
+                        >
                           {cat.category}
-                        </h3>
-                        <p className="text-sm text-gray-600">
+                        </Heading>
+                        <Text className="text-sm text-gray-600">
                           {cat.description}
-                        </p>
+                        </Text>
                       </CardContent>
                     </Card>
                   </Link>
@@ -192,17 +202,14 @@ const Tourism: React.FC = () => {
             { label: 'Tourism', href: '/tourism' },
             { label: categoryData.category },
           ]}
+          lightBg={true}
           className="mb-8"
         />
         <Icon className="h-8 w-8 mb-4 text-primary-600 rounded-md" />
-        <Heading>{categoryData.category}</Heading>
+        <Heading level={3}>{categoryData.category}</Heading>
         <Text className="text-gray-600 mb-6">{categoryData.description}</Text>
 
-        {loading ? (
-          <div className="flex justify-center items-center p-8">
-            <Text>Loading places...</Text>
-          </div>
-        ) : places.length === 0 ? (
+        {places.length === 0 ? (
           <Text className="text-gray-500 text-center py-8">
             No places listed for this category yet.
           </Text>

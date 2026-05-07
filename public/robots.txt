@@ -1,0 +1,16 @@
+# Robots.txt for betterallen
+# This file tells search engines how to crawl and index the website
+
+# Allow all user agents
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://betterallen.gov.ph/sitemap.xml
+
+# Crawl delay (in seconds) - allows 1 request per second
+Crawl-delay: 1
+
+# Disallow specific paths if needed in the future
+# Disallow: /admin/
+# Disallow: /private/

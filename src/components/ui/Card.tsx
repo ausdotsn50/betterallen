@@ -209,13 +209,13 @@ export const CardImage = ({
   className,
   ...props
 }: ImgHTMLAttributes<HTMLImageElement>) => (
-  <div className='bg-kapwa-bg-hover relative h-48 w-full overflow-hidden'>
+  <div className="bg-kapwa-bg-hover relative h-48 w-full overflow-hidden">
     <img
       className={cn(
         'h-full w-full object-cover transition-transform duration-500 group-hover:scale-105',
         className
       )}
-      loading='lazy'
+      loading="lazy"
       {...props}
       alt={props.alt || 'Card visualization'}
     />
@@ -262,7 +262,7 @@ export const CardAvatar = ({
         sizes[size],
         className
       )}
-      aria-hidden='true'
+      aria-hidden="true"
     >
       {name.charAt(0)}
     </div>
@@ -386,44 +386,44 @@ export const CardContactInfo = ({
       className={cn('text-kapwa-text-support text-sm not-italic', spacing)}
     >
       {contact.address && (
-        <div className='flex items-start gap-2'>
+        <div className="flex items-start gap-2">
           <MapPinIcon
             className={cn('text-kapwa-text-disabled mt-0.5 shrink-0', iconSize)}
-            aria-hidden='true'
+            aria-hidden="true"
           />
-          <span className='leading-snug'>{contact.address}</span>
+          <span className="leading-snug">{contact.address}</span>
         </div>
       )}
       {contact.phone && (
-        <div className='flex items-start gap-2'>
+        <div className="flex items-start gap-2">
           <PhoneIcon
             className={cn('text-kapwa-text-disabled mt-0.5 shrink-0', iconSize)}
-            aria-hidden='true'
+            aria-hidden="true"
           />
-          <span className='font-medium tabular-nums'>
+          <span className="font-medium tabular-nums">
             {Array.isArray(contact.phone) ? contact.phone[0] : contact.phone}
           </span>
         </div>
       )}
       {contact.email && (
-        <div className='flex items-start gap-2'>
+        <div className="flex items-start gap-2">
           <MailIcon
             className={cn('text-kapwa-text-disabled mt-0.5 shrink-0', iconSize)}
-            aria-hidden='true'
+            aria-hidden="true"
           />
           <a
             href={`mailto:${contact.email}`}
-            className='text-kapwa-text-brand font-bold break-all hover:underline'
+            className="text-kapwa-text-brand font-bold break-all hover:underline"
           >
             {contact.email}
           </a>
         </div>
       )}
       {contact.website && (
-        <div className='flex items-start gap-2'>
+        <div className="flex items-start gap-2">
           <ExternalLinkIcon
             className={cn('text-kapwa-text-disabled mt-0.5 shrink-0', iconSize)}
-            aria-hidden='true'
+            aria-hidden="true"
           />
           <a
             href={
@@ -431,9 +431,9 @@ export const CardContactInfo = ({
                 ? contact.website
                 : `https://${contact.website}`
             }
-            target='_blank'
-            rel='noreferrer'
-            className='text-kapwa-text-brand truncate font-bold hover:underline'
+            target="_blank"
+            rel="noreferrer"
+            className="text-kapwa-text-brand truncate font-bold hover:underline"
           >
             Official Website
           </a>
@@ -476,7 +476,7 @@ export const CardGrid = ({
         cols[columns as keyof typeof cols],
         className
       )}
-      role='list'
+      role="list"
     >
       {children}
     </div>
@@ -498,7 +498,7 @@ export const CardList = ({
   /** Additional CSS classes */
   className?: string;
 }) => (
-  <div className={cn('space-y-4', className)} role='list'>
+  <div className={cn('space-y-4', className)} role="list">
     {children}
   </div>
 );

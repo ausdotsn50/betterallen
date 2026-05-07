@@ -49,6 +49,21 @@
     },
     "disaster-preparedness": {
       "category": "Disaster Preparedness"
+    },
+    "tax-revenue": {
+      "category": "Tax & Revenue"
+    },
+    "civil-registry": {
+      "category": "Civil Registry"
+    },
+    "employment": {
+      "category": "Employment & Jobs"
+    },
+    "tourism": {
+      "category": "Tourism & Culture"
+    },
+    "legislative": {
+      "category": "Legislative"
     }
   },
   "governmentActivity": {
@@ -65,7 +80,7 @@
     "title": "Latest News & Updates"
   },
   "footer": {
-    "copyright": "© 2026 BetterGov. All content is public domain unless otherwise specified."
+    "copyright": "© 2026 BetterAllen. All content is public domain unless otherwise specified."
   },
   "navbar": {
     "home": "Home",
@@ -74,7 +89,8 @@
     "tourism": "Tourism",
     "hotlines": "Hotlines",
     "holidays": "Holidays",
-    "about": "About"
+    "about": "About",
+    "contact": "Contact"
   },
   "joinUs": {
     "stripTitle": "🚀 Join the #CivicTech Revolution",

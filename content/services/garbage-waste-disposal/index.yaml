@@ -1,2 +1,10 @@
 # Garbage and Waste Disposal Category Pages
 # This file contains all the pages/services available under the Garbage and Waste Disposal category
+
+pages:
+  - name: 'Secure garbage collection services for your property'
+    slug: 'garbage-collection-services'
+    description: 'Timely collection of segregated waste for residential, commercial, and institutional properties.'
+  - name: 'Request special garbage collection for urgent waste needs'
+    slug: 'garbage-collection-special-trip'
+    description: 'On-demand garbage collection service for special situations requiring additional trips.'

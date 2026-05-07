@@ -1,5 +1,9 @@
 import yaml from 'js-yaml';
 
+export const loadYamlData = <T>(raw: string): T => {
+  return yaml.load(raw) as T;
+};
+
 // Type definitions for the services data
 export interface Subcategory {
   name: string;
@@ -256,9 +260,7 @@ export interface CategoryIndex {
 }
 
 // Function to load category index data
-export async function loadCategoryIndex(
-  categorySlug: string
-): Promise<CategoryIndex> {
+export function loadCategoryIndex(categorySlug: string): CategoryIndex {
   const yamlContent = categoryIndexMap[categorySlug];
   if (!yamlContent) {
     return { layout: 'list', pages: [] };
@@ -285,14 +287,12 @@ export async function loadCategoryIndex(
 // Function to get subcategories for a category (with caching)
 const categoryCache = new Map<string, CategoryIndex>();
 
-export async function getCategorySubcategories(
-  categorySlug: string
-): Promise<CategoryIndex> {
+export function getCategorySubcategories(categorySlug: string): CategoryIndex {
   if (categoryCache.has(categorySlug)) {
     return categoryCache.get(categorySlug)!;
   }
 
-  const result = await loadCategoryIndex(categorySlug);
+  const result = loadCategoryIndex(categorySlug);
   categoryCache.set(categorySlug, result);
   return result;
 }

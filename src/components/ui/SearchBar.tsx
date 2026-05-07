@@ -76,7 +76,7 @@ const SearchBar = ({
         }
 
         try {
-          const index = await loadCategoryIndex(category.slug);
+          const index = loadCategoryIndex(category.slug);
           for (const page of index.pages || []) {
             if (
               page.name.toLowerCase().includes(query) ||
@@ -121,6 +121,10 @@ const SearchBar = ({
                 t('hero.search_placeholder') ||
                 'Search services...'
               }
+              aria-expanded={
+                isInputFocused && debouncedSearchQuery.trim() ? true : false
+              }
+              aria-controls="search-results"
               className="h-11 w-full rounded-full border-0 bg-transparent pl-11 pr-5 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-white/40"
             />
           </div>
@@ -141,7 +145,8 @@ const SearchBar = ({
             />
             <button
               type="button"
-              className="flex items-center gap-2 rounded-r-lg bg-primary-600 px-4 py-3 transition-colors hover:bg-primary-700"
+              className="flex items-center cursor-pointer gap-2 rounded-r-lg bg-primary-600 px-4 py-3 transition-colors hover:bg-primary-700"
+              aria-label="Search services"
             >
               <Search className="h-5 w-5" />
             </button>
@@ -152,6 +157,8 @@ const SearchBar = ({
           <div
             className="absolute top-full left-0 right-0 z-10 mt-1 max-h-96 overflow-y-auto rounded-lg border border-gray-300 bg-white shadow-lg"
             onMouseDown={e => e.preventDefault()}
+            role="listbox"
+            aria-label="Search results"
           >
             {searchResults.length > 0 ? (
               searchResults.map((result, idx) => (
@@ -166,6 +173,8 @@ const SearchBar = ({
                     setSearchQuery('');
                     setIsInputFocused(false);
                   }}
+                  role="option"
+                  aria-selected={false}
                   className="block px-3 py-2 text-left transition-colors hover:bg-primary-50 border-b border-gray-100 last:border-b-0"
                 >
                   <p className="line-clamp-1 text-left text-sm font-medium leading-5 text-gray-900">

@@ -1,6 +1,7 @@
 import { Building2Icon, Phone, User2 } from 'lucide-react';
 import SEO from '../../../components/SEO';
 import { Heading } from '../../../components/ui/Heading';
+import { Text } from '../../../components/ui/Text';
 import Banner from '../../../components/ui/Banner';
 import { officeIcons } from '../../../lib/officeIcons';
 import {
@@ -28,22 +29,28 @@ const sortedOffices = (municipalOffices as MunicipalOffice[])
 
 export default function MunicipalOffices() {
   return (
-    <div className="p-4 md:p-6 space-y-12 max-w-7xl mx-auto">
+    <main
+      className="p-4 md:p-6 space-y-12 max-w-7xl mx-auto"
+      aria-label="Municipal offices directory"
+    >
       <SEO
         title="Municipal Offices"
         description="Directory of municipal offices."
       />
       <div className="center-content max-w-3xl mx-auto text-center">
         <Heading level={2}>Municipal Offices</Heading>
-        <p className="text-gray-500 mt-2 text-sm">
+        <Text size="sm" className="text-gray-600 mt-2 mx-auto">
           Directory of local government offices and departments.
-        </p>
+        </Text>
       </div>
 
       <div className="mb-8 flex flex-col md:flex-row md:items-center gap-4">
-        <span className="text-xs text-gray-500 font-bold tracking-widest uppercase">
+        <Text
+          size="xs"
+          className="text-gray-500 font-bold tracking-widest uppercase"
+        >
           {sortedOffices.length} active offices
-        </span>
+        </Text>
       </div>
 
       {sortedOffices.length === 0 ? (
@@ -53,36 +60,49 @@ export default function MunicipalOffices() {
           {sortedOffices.map((office, i) => {
             const Icon = officeIcons[office.slug] || Building2Icon;
             return (
-              <div
+              <article
                 key={office.slug || i}
                 className="group flex h-full flex-col bg-white border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all rounded-xl"
+                aria-label={`${toTitleCase(formatGovName(office.office_name))} office`}
               >
                 <div className="flex items-start gap-3 p-5 pb-2">
-                  <div className="border border-primary-100 bg-primary-50 text-primary-600 shrink-0 rounded-lg p-2.5 shadow-sm">
-                    <Icon className="h-5 w-5" />
+                  <div
+                    className="border border-primary-100 bg-primary-50 text-primary-600 shrink-0 rounded-lg p-2.5 shadow-sm"
+                    aria-hidden="true"
+                  >
+                    <Icon className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-gray-900 text-lg font-bold leading-tight wrap-break-word">
+                    <Heading
+                      level={6}
+                      className="text-gray-900 text-lg font-bold leading-tight wrap-break-word"
+                    >
                       {toTitleCase(formatGovName(office.office_name))}
-                    </h3>
-                    <p className="text-primary-700 mt-1 text-xs font-bold tracking-widest uppercase wrap-break-word">
+                    </Heading>
+                    <Text className="text-primary-700 mt-1 text-xs font-bold tracking-widest uppercase wrap-break-word">
                       {office.office_name}
-                    </p>
+                    </Text>
                   </div>
                 </div>
                 {/* Department Head */}
                 {office.department_head?.name ? (
                   <div className="flex items-center gap-2 border border-gray-100 bg-gray-50 rounded-xl mx-5 px-3 py-2 mt-2">
-                    <div className="bg-white text-gray-400 border border-gray-100 rounded-full p-1">
-                      <User2 className="h-3.5 w-3.5" />
+                    <div
+                      className="bg-white text-gray-400 border border-gray-100 rounded-full p-1"
+                      aria-hidden="true"
+                    >
+                      <User2 className="h-3.5 w-3.5" aria-hidden="true" />
                     </div>
                     <div className="min-w-0">
-                      <p className="text-gray-500 mb-0.5 text-[10px] font-bold tracking-tighter uppercase">
+                      <Text className="text-gray-500 mb-0.5 text-[10px] font-bold tracking-tighter uppercase">
                         Department Head
-                      </p>
-                      <p className="text-black text-sm leading-tight font-bold">
+                      </Text>
+                      <Text
+                        size="sm"
+                        className="text-black leading-tight font-bold"
+                      >
                         {toTitleCase(office.department_head.name)}
-                      </p>
+                      </Text>
                     </div>
                   </div>
                 ) : (
@@ -93,22 +113,23 @@ export default function MunicipalOffices() {
                   {office.department_head?.contact ? (
                     <a
                       href={`tel:${office.department_head.contact}`}
-                      className="text-black flex items-center gap-1.5 text-sm font-semibold hover:text-primary-800 transition-colors"
+                      aria-label={`Call the department head of ${toTitleCase(formatGovName(office.office_name))} at ${office.department_head.contact}`}
+                      className="text-gray-600 flex items-center gap-1.5 text-sm font-semibold hover:text-primary-800 transition-colors"
                     >
-                      <Phone className="h-3 w-3" />
+                      <Phone className="h-3 w-3" aria-hidden="true" />
                       <span>{office.department_head.contact}</span>
                     </a>
                   ) : (
-                    <div className="text-gray-500 text-xs italic">
+                    <Text className="text-gray-500 text-xs italic">
                       No contact
-                    </div>
+                    </Text>
                   )}
                 </div>
-              </div>
+              </article>
             );
           })}
         </div>
       )}
-    </div>
+    </main>
   );
 }

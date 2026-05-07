@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Heading } from '../../../components/ui/Heading';
+import { Text } from '../../../components/ui/Text';
 import {
   legislativeOfficials,
   type LegislativeOfficial,
@@ -76,16 +77,13 @@ export default function MunicipalCommitteesPage() {
     : committees;
 
   return (
-    <div className="p-4 md:p-6">
+    <main className="p-4 md:p-6" aria-label="Municipal committees directory">
       {/* Header */}
-      <div>
-        {/* Back link — larger touch target on mobile */}
-        <div className="text-center mb-6 md:mb-8">
-          <Heading level={2}>Committees</Heading>
-          <p className="text-gray-500 mt-2 text-sm">
-            Active committees of the Sangguniang Bayan.
-          </p>
-        </div>
+      <div className="text-center mb-6 md:mb-8">
+        <Heading level={2}>Committees</Heading>
+        <Text size="sm" className="text-gray-500 mt-2 mx-auto">
+          Active committees of the Sangguniang Bayan.
+        </Text>
       </div>
 
       {/* Empty state */}
@@ -107,10 +105,13 @@ export default function MunicipalCommitteesPage() {
 
       {/* Footer count */}
       {filteredCommittees.length > 0 && (
-        <p className="text-gray-400 mt-6 md:mt-8 text-center text-xs">
+        <Text
+          size="xs"
+          className="text-gray-500 mt-6 md:mt-8 text-center mx-auto"
+        >
           Showing {filteredCommittees.length} of {committees.length} committees
-        </p>
+        </Text>
       )}
-    </div>
+    </main>
   );
 }

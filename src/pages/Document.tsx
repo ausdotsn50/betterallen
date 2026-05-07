@@ -70,7 +70,7 @@ export default function Document({
 
         // If the slug maps to its own index, render it as a nested listing
         if (isNestedCategory(documentSlug)) {
-          const index = await getCategorySubcategories(documentSlug);
+          const index = getCategorySubcategories(documentSlug);
           setNestedIndex(index);
           setBreadcrumbs([
             { label: 'Home', href: '/' },

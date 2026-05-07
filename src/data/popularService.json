@@ -15,10 +15,10 @@
       "color": "text-red-500 bg-red-50"
     },
     {
-      "labelKey": "services.education.category",
-      "label": "Education",
-      "slug": "education",
-      "icon": "GraduationCap",
+      "labelKey": "services.tax-revenue.category",
+      "label": "Tax",
+      "slug": "tax-revenue",
+      "icon": "PhilippinePeso",
       "color": "text-green-600 bg-green-50"
     },
     {
@@ -29,17 +29,17 @@
       "color": "text-orange-500 bg-orange-50"
     },
     {
-      "labelKey": "services.environment.category",
-      "label": "Environment",
-      "slug": "environment",
-      "icon": "TreePine",
+      "labelKey": "services.social-welfare.category",
+      "label": "Social-Welfare",
+      "slug": "social-welfare",
+      "icon": "HandCoins",
       "color": "text-emerald-600 bg-emerald-50"
     },
     {
-      "labelKey": "services.housing-land-use.category",
-      "label": "Housing",
-      "slug": "housing-land-use",
-      "icon": "Home",
+      "labelKey": "services.civil-registry.category",
+      "label": "Civil Registry",
+      "slug": "civil-registr            y",
+      "icon": "FileStack",
       "color": "text-purple-600 bg-purple-50"
     }
   ]

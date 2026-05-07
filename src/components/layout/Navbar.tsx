@@ -1,12 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import {
-  X,
-  Menu,
-  ChevronDown,
-  CheckCircle2,
-  Thermometer,
-  Clock,
-} from 'lucide-react';
+import { X, Menu, ChevronDown, Thermometer, Clock } from 'lucide-react';
 import { mainNavigation } from '../../data/navigation';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -141,9 +134,9 @@ const Navbar: React.FC = () => {
       }
     };
 
-    // Check if an hour has passed since last fetch
+    // Check if 12hours has passed since last fetch
     const now = Date.now();
-    if (now - lastWeatherFetchTime >= 3600000) {
+    if (now - lastWeatherFetchTime >= 43200000) {
       fetchWeather();
     }
   }, [lastWeatherFetchTime]);
@@ -303,7 +296,7 @@ const Navbar: React.FC = () => {
 
       {/* currency exchange, temp, and date */}
       <div
-        className={`bg-primary-800 transition-all duration-300 overflow-hidden ${
+        className={`bg-primary-900 transition-all duration-300 overflow-hidden ${
           isScrolled ? 'max-h-0' : 'max-h-14'
         }`}
       >
@@ -365,25 +358,16 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <CheckCircle2 className="w-12 h-12 mr-3" />
-              {/* <img
-                src="/ph-logo.webp"
-                alt="Philippines Coat of Arms"
-                className="w-12 h-12 mr-3"
-              /> */}
-              <div>
-                <div className="font-bold text-black">
-                  {import.meta.env.VITE_GOVERNMENT_NAME}
-                </div>
-                <div className="text-xs text-gray-800">
-                  {t('site_description')}
-                </div>
-              </div>
+              <img
+                src="/betterallen_navbar.png"
+                alt="BetterAllen logo"
+                className="w-auto h-12 mr-3"
+              />
             </Link>
           </div>
 
           {/* Desktop navigation */}
-          <div className="items-center hidden pr-24 space-x-8 lg:flex">
+          <div className="items-center hidden pr-4 space-x-8 lg:flex">
             {/* Main navigation items with dropdowns */}
             {mainNavigation.map(item => (
               <div key={item.label} className="relative group">

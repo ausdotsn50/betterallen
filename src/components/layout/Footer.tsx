@@ -4,7 +4,7 @@ import {
   Twitter,
   Instagram,
   Youtube,
-  CheckCircle2,
+  ExternalLink,
 } from 'lucide-react';
 import { footerNavigation } from '../../data/navigation';
 import { Link } from 'react-router-dom';
@@ -34,22 +34,12 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <CheckCircle2 className="h-12 w-12 mr-3" />
-              {/* <img
-                src="/ph-logo.webp"
-                alt="Philippines Coat of Arms"
-                className="h-12 w-12 mr-3"
-              /> */}
-
-              <div>
-                <div className="font-bold">{t('site_name')}</div>
-                <div className="text-xs text-gray-400">BetterGov.ph Portal</div>
-              </div>
+              <img
+                src="/betterallen_navbar_white_text.png"
+                alt="BetterAllen logo"
+                className="h-12 w-auto mr-3"
+              />
             </div>
-            <p className="text-gray-400 text-sm mb-4">
-              A community portal providing Philippine citizens, businesses, and
-              visitors with information and services.
-            </p>
             <div className="flex space-x-4">
               {footerNavigation.socialLinks.map(link => (
                 <Link
@@ -75,7 +65,7 @@ const Footer: React.FC = () => {
                       to={link.href}
                       className="text-gray-400 hover:text-white text-sm transition-colors"
                     >
-                      {link.label}
+                      {t(link.label)}
                     </Link>
                   </li>
                 ))}
@@ -103,23 +93,18 @@ const Footer: React.FC = () => {
                 Terms of Use
               </a> */}
               <Link
-                to="https://github.com/bettergovph/bettergov"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+                to="https://github.com/xandreiAThome/betterallen"
+                className="text-gray-400 gap-1 hover:text-white text-sm transition-colors inline-flex items-center"
               >
                 Contribute at GitHub
+                <ExternalLink size={12} className="text-gray-600" />
               </Link>
               <Link
-                to="/sitemap"
+                to="/sitemap.xml"
                 className="text-gray-400 hover:text-white text-sm transition-colors"
               >
                 Sitemap
               </Link>
-              <a
-                href="/accessibility"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Accessibility
-              </a>
             </div>
           </div>
         </div>

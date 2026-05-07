@@ -49,6 +49,21 @@
     },
     "disaster-preparedness": {
       "category": "Paghahanda sa Sakuna"
+    },
+    "tax-revenue": {
+      "category": "Buwis"
+    },
+    "civil-registry": {
+      "category": "Patalaang Sibil"
+    },
+    "employment": {
+      "category": "Empleyo at Trabaho"
+    },
+    "tourism": {
+      "category": "Turismo at Kultura"
+    },
+    "legislative": {
+      "category": "Lehislatibo"
     }
   },
   "governmentActivity": {
@@ -65,16 +80,17 @@
     "title": "Pinakabagong Balita at Update"
   },
   "footer": {
-    "copyright": "© 2026 BetterGov. Ang lahat ng nilalaman ay nasa pampublikong domain maliban kung iba ang inilaan."
+    "copyright": "© 2026 BetterAllen. Ang lahat ng nilalaman ay nasa pampublikong domain maliban kung iba ang inilaan."
   },
   "navbar": {
-    "home": "Bahay",
+    "home": "Tahanan",
     "government": "Pamahalaan",
     "services": "Mga Serbisyo",
     "tourism": "Turismo",
     "hotlines": "Mga Hotline",
     "holidays": "Mga Pista",
-    "about": "Tungkol sa Amin"
+    "about": "Tungkol sa Amin",
+    "contact": "Makipag-ugnayan"
   },
   "joinUs": {
     "stripTitle": "🚀 Sumali sa #CivicTech Revolution",

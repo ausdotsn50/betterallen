@@ -34,7 +34,7 @@ const Banner: React.FC<BannerProps> = ({
     className={`flex items-start gap-3 border-l-4 rounded-md p-4 mb-4 ${bgMap[type]} ${className}`}
     role={type === 'error' ? 'alert' : 'status'}
   >
-    {icon && <span>{iconMap[type]}</span>}
+    {icon && <span aria-hidden="true">{iconMap[type]}</span>}
     <div>
       {title && <div className="font-semibold mb-1">{title}</div>}
       <div className="text-sm text-gray-700">{description}</div>

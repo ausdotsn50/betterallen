@@ -34,6 +34,8 @@ export default function ElectedOfficialsNav() {
             <Link
               key={item.path}
               to={item.path}
+              aria-label={item.label}
+              aria-current={isActive ? 'page' : undefined}
               className={classNames(
                 'flex items-center gap-2 rounded-xl border px-3 py-2 text-xs font-bold tracking-widest uppercase transition-all',
                 isActive
@@ -41,7 +43,7 @@ export default function ElectedOfficialsNav() {
                   : 'border-gray-200 text-gray-600 hover:border-primary-400 hover:text-primary-600'
               )}
             >
-              <Icon className="h-3.5 w-3.5" />
+              <Icon className="h-3.5 w-3.5" aria-hidden="true" />
               {item.label}
             </Link>
           );

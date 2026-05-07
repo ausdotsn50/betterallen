@@ -59,3 +59,5 @@ terraform.rc
 
 # Lock file (optional - remove this line if you want to commit the lock file)
 .terraform.lock.hcl
+# Generated files
+public/sitemap.xml

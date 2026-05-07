@@ -57,7 +57,7 @@ export const tourismCategories: TourismData = yaml.load(
 ) as TourismData;
 
 // Function to get places for a category
-export async function getTourismPlaces(categorySlug: string): Promise<Place[]> {
+export function getTourismPlaces(categorySlug: string): Place[] {
   const yamlContent = categoryIndexMap[categorySlug];
   if (!yamlContent) {
     return [];

@@ -23,7 +23,7 @@ const SearchInput = ({
   onChangeValue,
   className,
   placeholder = 'Search...',
-  icon = <SearchIcon className='text-[8px] text-kapwa-text-disabled h-4 w-4' />,
+  icon = <SearchIcon className="text-[8px] text-kapwa-text-disabled h-4 w-4" />,
   size = 'md',
   clearable = true,
   ...props
@@ -40,11 +40,11 @@ const SearchInput = ({
 
   return (
     <div className={cn('relative w-full', className)}>
-      <div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4'>
+      <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
         {icon}
       </div>
       <input
-        type='text'
+        type="text"
         value={value}
         onChange={e => onChangeValue(e.target.value)}
         className={cn(
@@ -60,11 +60,11 @@ const SearchInput = ({
       />
       {clearable && value && (
         <button
-          type='button'
-          className='text-kapwa-text-disabled hover:text-kapwa-text-on-disabled absolute inset-y-0 right-0 flex items-center pr-3 transition-colors'
+          type="button"
+          className="text-kapwa-text-disabled hover:text-kapwa-text-on-disabled absolute inset-y-0 right-0 flex items-center pr-3 transition-colors"
           onClick={handleClear}
         >
-          <XIcon className='h-4 w-4' />
+          <XIcon className="h-4 w-4" />
         </button>
       )}
     </div>

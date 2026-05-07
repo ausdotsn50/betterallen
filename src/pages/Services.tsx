@@ -6,25 +6,17 @@ import {
   serviceCategories,
   getCategorySubcategories,
   type Subcategory,
-  type CategoryIndex,
 } from '../data/yamlLoader';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import ServicesSection from '../components/home/ServicesSection';
 import SEO from '../components/SEO';
 import { Card, CardContent } from '@bettergov/kapwa/card';
 import { Banner } from '@bettergov/kapwa/banner';
-import { useState, useEffect } from 'react';
 import { resolveLucideIcon } from '../lib/utils';
 import PageBanner from '@/components/ui/PageBanner';
 
 const Services: React.FC = () => {
   const { category } = useParams();
-  const [categoryIndex, setCategoryIndex] = useState<CategoryIndex>({
-    layout: 'list',
-    pages: [],
-  });
-  const [loading, setLoading] = useState(false);
-  const subcategories: Subcategory[] = categoryIndex.pages;
 
   const getCategory = () => {
     return serviceCategories.categories.find(c => c.slug === category);
@@ -33,15 +25,8 @@ const Services: React.FC = () => {
   const categoryData = getCategory();
   const Icon = resolveLucideIcon(categoryData?.icon);
 
-  useEffect(() => {
-    if (category && categoryData) {
-      setLoading(true);
-      getCategorySubcategories(category)
-        .then(setCategoryIndex)
-        .catch(console.error)
-        .finally(() => setLoading(false));
-    }
-  }, [category, categoryData]);
+  const categoryIndex = getCategorySubcategories(category || '');
+  const subcategories: Subcategory[] = categoryIndex.pages;
 
   const breadcrumbs = [
     { label: 'Home', href: '/' },
@@ -91,81 +76,93 @@ const Services: React.FC = () => {
         description={categoryData.description}
         keywords={`${categoryData.category}, government services, public services, local government`}
       />
-      <Section className="p-3 mb-12">
+      <Section
+        className="p-3 mb-12"
+        aria-label={`${categoryData.category || category} services`}
+      >
         <Breadcrumbs className="mb-8" />
-        <Icon className="h-8 w-8 mb-4 text-primary-600 rounded-md" />
+        <Icon
+          className="h-8 w-8 mb-4 text-primary-600 rounded-md"
+          aria-hidden="true"
+        />
         <Heading>{categoryData.category || category}</Heading>
         <Text className="text-gray-600 mb-6">{categoryData.description}</Text>
 
-        {loading ? (
-          <div className="flex justify-center items-center p-8">
-            <Text>Loading services...</Text>
+        {categoryIndex.title && (
+          <Heading level={3}>{categoryIndex.title}</Heading>
+        )}
+        {categoryIndex.description && (
+          <Text className="text-gray-600 mb-4">
+            {categoryIndex.description}
+          </Text>
+        )}
+        {categoryIndex.layout === 'grid' ? (
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {subcategories.map(subcategory => (
+              <Link
+                key={subcategory.slug}
+                to={`/services/${category}/${subcategory.slug}`}
+                aria-label={`${subcategory.name} - ${categoryData.category || category}`}
+              >
+                <Card
+                  hoverable
+                  className="h-full border-t-4 border-primary-500"
+                >
+                  <CardContent>
+                    <Heading
+                      level={5}
+                      className="text-lg font-medium text-gray-900"
+                    >
+                      {subcategory.name}
+                    </Heading>
+                    {subcategory.description && (
+                      <Text className="mt-2 text-sm text-gray-600">
+                        {subcategory.description}
+                      </Text>
+                    )}
+                    <span
+                      className="inline-block px-2 py-1 mt-2 text-xs font-medium rounded-sm bg-gray-100 text-gray-800"
+                      aria-label={`Category: ${categoryData.category || category}`}
+                    >
+                      {categoryData.category || category}
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
           </div>
         ) : (
-          <>
-            {categoryIndex.title && (
-              <Heading level={3}>{categoryIndex.title}</Heading>
-            )}
-            {categoryIndex.description && (
-              <Text className="text-gray-600 mb-4">
-                {categoryIndex.description}
-              </Text>
-            )}
-            {categoryIndex.layout === 'grid' ? (
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {subcategories.map(subcategory => (
-                  <Link
-                    key={subcategory.slug}
-                    to={`/services/${category}/${subcategory.slug}`}
-                  >
-                    <Card
-                      hoverable
-                      className="h-full border-t-4 border-primary-500"
+          <div className="space-y-4">
+            {subcategories.map(subcategory => (
+              <Link
+                key={subcategory.slug}
+                to={`/services/${category}/${subcategory.slug}`}
+                aria-label={`${subcategory.name} - ${categoryData.category || category}`}
+              >
+                <Card hoverable className="mb-4">
+                  <CardContent>
+                    <Heading
+                      level={5}
+                      className="text-lg font-medium text-gray-900"
                     >
-                      <CardContent>
-                        <h4 className="text-lg font-medium text-gray-900">
-                          {subcategory.name}
-                        </h4>
-                        {subcategory.description && (
-                          <p className="mt-2 text-sm text-gray-600">
-                            {subcategory.description}
-                          </p>
-                        )}
-                        <span className="inline-block px-2 py-1 mt-2 text-xs font-medium rounded-sm bg-gray-100 text-gray-800">
-                          {categoryData.category || category}
-                        </span>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                ))}
-              </div>
-            ) : (
-              <div className="space-y-4">
-                {subcategories.map(subcategory => (
-                  <Link
-                    key={subcategory.slug}
-                    to={`/services/${category}/${subcategory.slug}`}
-                  >
-                    <Card hoverable className="mb-4">
-                      <CardContent>
-                        <h4 className="text-lg font-medium text-gray-900">
-                          {subcategory.name}
-                        </h4>
-                        {subcategory.description && (
-                          <p className="mt-2 text-sm text-gray-600">
-                            {subcategory.description}
-                          </p>
-                        )}
-                        <span className="inline-block px-2 py-1 mt-2 text-xs font-medium rounded-sm bg-gray-100 text-gray-800">
-                          {categoryData.category || category}
-                        </span>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </>
+                      {subcategory.name}
+                    </Heading>
+                    {subcategory.description && (
+                      <Text size="sm" className="mt-2 text-gray-600">
+                        {subcategory.description}
+                      </Text>
+                    )}
+                    <span
+                      className="inline-block px-2 py-1 mt-2 text-xs font-medium rounded-sm bg-gray-100 text-gray-800"
+                      aria-label={`Category: ${categoryData.category || category}`}
+                    >
+                      {categoryData.category || category}
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
         )}
       </Section>
     </>

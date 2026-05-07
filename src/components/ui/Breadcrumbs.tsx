@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface BreadcrumbItem {
   label: string;
@@ -10,9 +11,14 @@ interface BreadcrumbItem {
 interface BreadcrumbsProps {
   items?: BreadcrumbItem[];
   className?: string;
+  lightBg?: boolean;
 }
 
-const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = '' }) => {
+const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
+  items,
+  className = '',
+  lightBg = false,
+}) => {
   const location = useLocation();
 
   // Generate breadcrumbs from current path if no items provided
@@ -49,8 +55,13 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = '' }) => {
     >
       {breadcrumbItems.map((item, index) => (
         <React.Fragment key={index}>
-          {index === 0 && <Home className="h-4 w-4" />}
-          {index > 0 && <ChevronRight className="h-4 w-4 text-gray-400" />}
+          {index === 0 && <Home className="h-4 w-4" aria-hidden="true" />}
+          {index > 0 && (
+            <ChevronRight
+              className="h-4 w-4 text-gray-400"
+              aria-hidden="true"
+            />
+          )}
           {item.href ? (
             <Link
               to={item.href}
@@ -59,7 +70,13 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = '' }) => {
               {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
             </Link>
           ) : (
-            <span className="text-gray-900 font-medium" aria-current="page">
+            <span
+              className={cn(
+                'font-medium',
+                lightBg ? 'text-primary-700' : 'text-primary-200'
+              )}
+              aria-current="page"
+            >
               {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
             </span>
           )}

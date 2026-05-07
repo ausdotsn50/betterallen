@@ -10,31 +10,49 @@
       "name": "Fire Station",
       "slug": "allen-bfp",
       "icon": "Flame",
-      "number": "0951-407-6245"
+      "number": "09154781077"
     },
     {
       "name": "Coast Guard",
       "slug": "northern-samar-pcg",
       "icon": "Ship",
-      "number": "0963-948-4388"
+      "number": "09178180978"
     },
     {
       "name": "K9 Unit",
       "slug": "k9-unit",
       "icon": "Dog",
-      "number": "0906-278-5840"
+      "number": "09178004989"
     },
     {
       "name": "MDRRMO",
       "slug": "mdrrmo",
       "icon": "TriangleAlert",
-      "number": "0951-616-1397"
+      "number": "09617609997"
     },
     {
       "name": "District Hospital",
       "slug": "allen-district-hospital",
       "icon": "Hospital",
       "number": "0968-549-5394"
+    },
+    {
+      "name": "Allen RHU",
+      "slug": "allen-rhu",
+      "icon": "Cross",
+      "number": "09958334312"
+    },
+    {
+      "name": "NORSAMELCO",
+      "slug": "norsamelco",
+      "icon": "Zap",
+      "number": "09672370255"
+    },
+    {
+      "name": "53rd ENGR Battalion",
+      "slug": "53-engr",
+      "icon": "HardHat",
+      "number": "09307385251"
     }
   ]
 }

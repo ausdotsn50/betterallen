@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './pages/about';
 import AboutAllen from './pages/about/Allen';
 import AboutBetterGov from './pages/about/BetterGov';
+import Contact from './pages/Contact';
 
 // --- ADD THESE NEW IMPORTS ---
 import ElectedOfficials from './pages/government/elected-officials/ElectedOfficials';
@@ -41,7 +42,7 @@ function App() {
 
               <Route path="/tourism/:category" element={<Tourism />} />
               <Route path="/tourism" element={<Tourism />} />
-
+              <Route path="/contact" element={<Contact />} />
               {/* --- FIXED GOVERNMENT ROUTING --- */}
               <Route path="/government" element={<Government />}>
                 {/* 1. Elected Officials Branch */}
