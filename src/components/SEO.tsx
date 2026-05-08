@@ -32,8 +32,12 @@ export default function SEO({
   const fullKeywords = keywords || defaultKeywords;
   const fullUrl =
     url || window.location.href || import.meta.env.VITE_WEBSITE_URL || '';
+  const origin =
+    typeof window !== 'undefined'
+      ? window.location.origin
+      : import.meta.env.VITE_WEBSITE_URL || 'https://betterallen.org';
   const fullImage =
-    image || import.meta.env.VITE_OG_IMAGE_URL || `${fullUrl}/og-image.webp`;
+    image || import.meta.env.VITE_OG_IMAGE_URL || `${origin}/og-image.webp`;
   const twitterHandle = import.meta.env.VITE_TWITTER_HANDLE || '';
 
   return (
