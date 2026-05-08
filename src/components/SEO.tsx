@@ -37,7 +37,7 @@ export default function SEO({
       ? window.location.origin
       : import.meta.env.VITE_WEBSITE_URL || 'https://betterallen.org';
   const fullImage =
-    image || import.meta.env.VITE_OG_IMAGE_URL || `${origin}/og-image.webp`;
+    image || import.meta.env.VITE_OG_IMAGE_URL || `${origin}/og-image.png`;
   const twitterHandle = import.meta.env.VITE_TWITTER_HANDLE || '';
 
   return (
@@ -59,6 +59,11 @@ export default function SEO({
       <meta property="og:image" content={fullImage} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="en_US" />
+
+      {/* Secure image URL for Facebook */}
+      {fullImage && <meta property="og:image:secure_url" content={fullImage} />}
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
