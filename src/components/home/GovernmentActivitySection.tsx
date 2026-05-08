@@ -79,14 +79,14 @@ export default function GovernmentActivitySection({
         <Heading level={2}>{title || t('governmentActivity.title')}</Heading>
         <Text className="text-gray-600 mb-6">
           {description || t('governmentActivity.description')}
-        </Text>
+        </Text>{' '}
+        <Heading level={4} className="mb-6 mt-8">
+          Elected Officials
+        </Heading>
       </motion.div>
 
       {(mayor || viceMayor) && (
         <>
-          <Heading level={4} className="mb-6 mt-8">
-            Elected Officials
-          </Heading>
           <motion.div
             className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2"
             initial="hidden"

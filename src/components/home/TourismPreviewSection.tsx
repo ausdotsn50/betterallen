@@ -133,10 +133,11 @@ export default function TourismPreviewSection() {
             </Carousel>
           </motion.div>
         )}
-
-        <Heading level={4} className="mb-6 mt-12">
-          Popular Spots in Allen
-        </Heading>
+        <motion.div initial="hidden" whileInView="show" variants={itemVariants}>
+          <Heading level={4} className="mb-6 mt-12">
+            Popular Spots in Allen
+          </Heading>
+        </motion.div>
 
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -145,6 +146,7 @@ export default function TourismPreviewSection() {
           viewport={{ once: true }}
           variants={listVariants}
         >
+          {' '}
           {previewedPlaces.map(place => (
             <motion.div
               key={place.slug}

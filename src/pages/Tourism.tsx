@@ -17,6 +17,7 @@ import { resolveLucideIcon } from '../lib/utils';
 import { MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FiFacebook } from 'react-icons/fi';
+import TourismCard from '@/components/ui/TourismCard';
 
 const heroImages = getFeaturedPlaces().map(p => p.image);
 
@@ -220,35 +221,18 @@ const Tourism: React.FC = () => {
         ) : (
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {places.map(place => (
-              <Card
-                key={place.slug}
-                hoverable
-                className={`h-full border-t-4 ${categoryData.color.border}`}
-              >
-                <CardContent>
-                  {place.image && (
-                    <div
-                      className="h-40 bg-cover bg-center rounded-md mb-4"
-                      style={{ backgroundImage: `url(${place.image})` }}
-                      aria-hidden="true"
-                    />
-                  )}
-                  <Heading
-                    level={5}
-                    className="font-semibold text-gray-900 mb-2"
-                  >
-                    {place.name}
-                  </Heading>
-                  <Text className="text-sm text-gray-600 mb-2">
-                    {place.description}
-                  </Text>
-                  {place.barangay && (
-                    <span className="inline-block px-2 py-1 text-xs font-medium rounded-sm bg-gray-100 text-gray-800">
-                      {place.barangay}
-                    </span>
-                  )}
-                </CardContent>
-              </Card>
+              <TourismCard
+                name={place.name}
+                description={place.description}
+                slug={place.slug}
+                barangay={place.barangay}
+                category={place.category}
+                categoryColor={place.categoryColor}
+                image={place.image}
+                mapsUrl={place.mapsUrl}
+                contact={place.contact}
+                socialUrl={place.socialUrl}
+              />
             ))}
           </div>
         )}

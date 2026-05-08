@@ -264,10 +264,11 @@ const Contact = () => {
 
         <Section className="pb-12" maxWidth="6xl">
           <div className="mb-6">
-            <Heading level={4}>Report Problems or Inaccuracies</Heading>
+            <Heading level={4}>Report or Suggest Changes</Heading>
             <Text className="mt-2 max-w-none text-gray-600 leading-relaxed">
-              If you notice any problems or incorrect details on this website,
-              please let me know using one of the options below.
+              If you notice any problems, incorrect details, suggestions, or new
+              data to add to the website, please let me know using one of the
+              options below.
             </Text>
           </div>
 
@@ -328,7 +329,7 @@ const Contact = () => {
                     </Heading>
                     <Text className="mb-2 max-w-none text-sm text-gray-600">
                       Use the repository to report website issues or suggest a
-                      fix.
+                      change.
                     </Text>
                     <Text className="font-medium text-primary-700">
                       github.com/xandreiAThome/betterallen
