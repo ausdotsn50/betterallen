@@ -28,10 +28,6 @@ const Services: React.FC = () => {
   const categoryIndex = getCategorySubcategories(category || '');
   const subcategories: Subcategory[] = categoryIndex.pages;
 
-  const breadcrumbs = [
-    { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
-  ];
   if (!category) {
     return (
       <>
@@ -42,7 +38,6 @@ const Services: React.FC = () => {
         />
 
         <PageBanner
-          breadcrumbs={breadcrumbs}
           title="Local Government Services"
           description="Explore official municipal services from the Citizens Charter."
         />
@@ -80,7 +75,7 @@ const Services: React.FC = () => {
         className="p-3 mb-12"
         aria-label={`${categoryData.category || category} services`}
       >
-        <Breadcrumbs className="mb-8" />
+        <Breadcrumbs lightBg={true} className="mb-8" />
         <Icon
           className="h-8 w-8 mb-4 text-primary-600 rounded-md"
           aria-hidden="true"

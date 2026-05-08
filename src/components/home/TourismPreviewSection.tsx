@@ -169,7 +169,7 @@ export default function TourismPreviewSection() {
 
         <div className="mt-8 text-center">
           <Link
-            to="/contact"
+            to="/tourism"
             aria-label="View all contact information"
             className="inline-flex items-center text-primary-600 hover:text-primary-700 transition-all font-medium group"
           >

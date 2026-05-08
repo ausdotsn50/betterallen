@@ -6,7 +6,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://betterallen.gov.ph/sitemap.xml
+Sitemap: /sitemap.xml
 
 # Crawl delay (in seconds) - allows 1 request per second
 Crawl-delay: 1

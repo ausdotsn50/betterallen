@@ -11,8 +11,8 @@ const Home: React.FC = () => {
     <>
       <SEO
         title="Home"
-        description="Official website of your local government. Access government services, information, and resources."
-        keywords="government, local government, services, public services, civic services"
+        description={`Official website of ${import.meta.env.VITE_GOVERNMENT_NAME || 'Allen'}. Discover tourism attractions, government services, and local information for residents and visitors.`}
+        keywords="government, tourism, services, attractions, local government"
       />
       <main className="grow">
         <Hero />

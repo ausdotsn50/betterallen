@@ -6,7 +6,7 @@ import { Text } from '../components/ui/Text';
 import { Card, CardContent } from '@bettergov/kapwa/card';
 import { resolveLucideIcon } from '../lib/utils';
 import hotlinesData from '../data/hotlines.json';
-import { FacebookIcon } from 'lucide-react';
+import { FacebookIcon, Github, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Contact = () => {
@@ -259,6 +259,84 @@ const Contact = () => {
                 </Card>
               );
             })}
+          </div>
+        </Section>
+
+        <Section className="pb-12" maxWidth="6xl">
+          <div className="mb-6">
+            <Heading level={4}>Report Problems or Inaccuracies</Heading>
+            <Text className="mt-2 max-w-none text-gray-600 leading-relaxed">
+              If you notice any problems or incorrect details on this website,
+              please let me know using one of the options below.
+            </Text>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Card hoverable className="h-full">
+              <CardContent className="h-full">
+                <a
+                  href={`mailto:${import.meta.env.VITE_MAINTAINER_EMAIL}`}
+                  aria-label={`Email us at ${import.meta.env.VITE_MAINTAINER_EMAIL} to report a problem or inaccuracy`}
+                  className="flex h-full items-start gap-4 rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                >
+                  <div
+                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary-100 text-primary-700"
+                    aria-hidden="true"
+                  >
+                    <Mail className="h-6 w-6" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <Heading
+                      level={6}
+                      className="mb-2 text-lg font-semibold text-gray-900"
+                    >
+                      Email Me
+                    </Heading>
+                    <Text className="mb-2 max-w-none text-sm text-gray-600">
+                      Send a message if you spot something that needs to be
+                      corrected.
+                    </Text>
+                    <Text className="font-medium text-primary-700">
+                      {import.meta.env.VITE_MAINTAINER_EMAIL}
+                    </Text>
+                  </div>
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card hoverable className="h-full">
+              <CardContent className="h-full">
+                <a
+                  href="https://github.com/xandreiAThome/betterallen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the website repository on GitHub to report a problem or inaccuracy"
+                  className="flex h-full items-start gap-4 rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                >
+                  <div
+                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gray-100 text-gray-800"
+                    aria-hidden="true"
+                  >
+                    <Github className="h-6 w-6" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <Heading
+                      level={6}
+                      className="mb-2 text-lg font-semibold text-gray-900"
+                    >
+                      Open a GitHub Issue
+                    </Heading>
+                    <Text className="mb-2 max-w-none text-sm text-gray-600">
+                      Use the repository to report website issues or suggest a
+                      fix.
+                    </Text>
+                    <Text className="font-medium text-primary-700">
+                      github.com/xandreiAThome/betterallen
+                    </Text>
+                  </div>
+                </a>
+              </CardContent>
+            </Card>
           </div>
         </Section>
       </main>

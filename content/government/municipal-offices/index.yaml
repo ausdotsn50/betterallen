@@ -38,7 +38,7 @@
   website: null
   email: null
   department_head:
-    name: ALICE C. ARC
+    name: ALICE C. ARCE
     contact: '0929-714-7923'
     email: null
 
@@ -49,8 +49,8 @@
   website: null
   email: null
   department_head:
-    name: MILA G. SABAYO
-    contact: '0947-517-8452'
+    name: CARLO T. OMBROG - OIC
+    contact: '0945-4503-4847'
     email: null
 
 - slug: local-civil-registry-office
@@ -148,7 +148,7 @@
   website: null
   email: null
   department_head:
-    name: CARLO T. OMBROG - OIC
+    name: CARLO T. OMBROG
     contact: '0945-4503-4847'
     email: null
 
@@ -227,15 +227,4 @@
   department_head:
     name: ART WENSO G. TAN - DESIGNATE
     contact: '0977-691-9160'
-    email: null
-
-- slug: adh-admin
-  office_name: ADH ADMIN
-  address: null
-  trunkline: null
-  website: null
-  email: null
-  department_head:
-    name: JEFFERSON J. JAMORALIN
-    contact: '0917-166-7765'
     email: null

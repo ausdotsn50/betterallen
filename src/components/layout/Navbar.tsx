@@ -359,7 +359,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img
-                src="/betterallen_navbar.png"
+                src="/betterallen_navbar.webp"
                 alt="BetterAllen logo"
                 className="w-auto h-12 mr-3"
               />

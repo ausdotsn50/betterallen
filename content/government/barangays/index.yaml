@@ -58,9 +58,9 @@
       contact: '09368200552'
       email: null
     - role: SK Chairperson
-      name: null
-      contact: null
-      email: null
+      name: Aljun B. Delos Santos
+      contact: 09633080742l
+      email: aljun2710@gmail.com
 
 - slug: barangay-frederick
   barangay_name: FREDERICK
@@ -122,9 +122,9 @@
       contact: '09056932793'
       email: manolitofgubat@gmail.com
     - role: SK Chairperson
-      name: null
-      contact: null
-      email: null
+      name: Manolito F. Gubat Jr.
+      contact: 09056932793
+      email: manolitofgubat@gmail.com
 
 - slug: barangay-kinabranan-i
   barangay_name: KINABRANAN I
@@ -233,8 +233,8 @@
       contact: null
       email: null
     - role: SK Chairperson
-      name: null
-      contact: null
+      name: John Carlo Estinopo
+      contact: 09854484204
       email: null
 
 - slug: barangay-sabang-i
