@@ -99,12 +99,12 @@ const Footer: React.FC = () => {
                 Contribute at GitHub
                 <ExternalLink size={12} className="text-gray-600" />
               </Link>
-              <Link
-                to="/sitemap.xml"
+              <a
+                href="/sitemap.xml"
                 className="text-gray-400 hover:text-white text-sm transition-colors"
               >
                 Sitemap
-              </Link>
+              </a>
             </div>
           </div>
         </div>

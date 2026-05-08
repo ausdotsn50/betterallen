@@ -10,6 +10,7 @@ export interface Place {
   contact?: string;
   socialUrl?: string;
   featured?: boolean;
+  preview?: boolean;
   category: string;
   categoryColor: string;
 }
@@ -86,6 +87,17 @@ export function getFeaturedPlaces(): Place[] {
     try {
       const data = yaml.load(yamlContent) as { places: Place[] };
       return (data.places || []).filter(p => p.featured);
+    } catch {
+      return [];
+    }
+  });
+}
+
+export function getPreviewPlaces(): Place[] {
+  return Object.values(categoryIndexMap).flatMap(yamlContent => {
+    try {
+      const data = yaml.load(yamlContent) as { places: Place[] };
+      return (data.places || []).filter(p => p.preview);
     } catch {
       return [];
     }

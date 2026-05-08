@@ -1,12 +1,13 @@
 places:
-  - name: 'Imaga Rock Formation'
-    slug: 'imaga-rock-formation'
+  - name: 'Punta Rock Formation'
+    slug: 'punta-rock-formation'
     description: 'A unique rugged cliff by the shore, with a viewing platform at the top'
     barangay: 'Cabacungan'
     category: 'Nature & Outdoor'
     categoryColor: 'bg-emerald-100 text-emerald-700'
     mapsUrl: 'https://maps.app.goo.gl/4AGktifVqS2PX6DQ6'
     image: '/images/imaga-rock.jpg'
+    preview: true
 
   - name: 'Tarangban Peak'
     slug: 'tarangban-peak'
@@ -16,4 +17,16 @@ places:
     categoryColor: 'bg-emerald-100 text-emerald-700'
     mapsUrl: https://maps.app.goo.gl/aE66KaU68qwJgWed8'
     image: '/images/tarangban-peak.jpg'
+    featured: true
+    preview: true
+
+  - name: 'Kinaguitman Falls'
+    slug: 'kinaguitman-falls'
+    description: 'A modest waterfall surrounded by rocks, greenery, and a countryside atmosphere'
+    barangay: 'Kinaguitman'
+    category: 'Nature & Outdoor'
+    categoryColor: 'bg-emerald-100 text-emerald-700'
+    mapsUrl: 'https://maps.app.goo.gl/Z3PYeaCHfsMsN23K7'
+    socialUrl: 'https://www.facebook.com/profile.php?id=100065517848300'
+    image: '/images/kinaguitman-falls.jpg'
     featured: true

@@ -5,6 +5,7 @@ places:
     barangay: 'Cabacungan'
     category: 'Beaches & Resorts'
     categoryColor: 'bg-sky-100 text-sky-700'
+    preview: true
     image: '/images/caba.jpg'
     mapsUrl: 'https://maps.app.goo.gl/pq4zygcsmtvFeb98A'
   # Birmingham as resort than lodging
@@ -70,3 +71,14 @@ places:
     categoryColor: 'bg-sky-100 text-sky-700'
     image: '/images/bantayan.jpg'
     mapsUrl: 'https://maps.app.goo.gl/6v6jvhzWCgameMoT7'
+
+  - name: 'Buenos Diaz'
+    slug: 'buenos-diaz'
+    description:
+    barangay: 'Cabacungan'
+    category: 'Beaches & Resorts'
+    categoryColor: 'bg-sky-100 text-sky-700'
+    image: '/images/buenos-diaz.jpg'
+    mapsUrl: 'https://maps.app.goo.gl/2goByMJbXcCRDf3j7'
+    contact: '0920 985 1130'
+    socialUrl: 'https://www.facebook.com/buenosdiazcababeachhouse'

@@ -2,7 +2,7 @@ import Section from '../ui/Section';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { Link } from 'react-router-dom';
-import { tourismCategories, getFeaturedPlaces } from '../../data/tourismLoader';
+import { tourismCategories, getPreviewPlaces } from '../../data/tourismLoader';
 import type { Place } from '../../data/tourismLoader';
 import { MapPin } from 'lucide-react';
 import TourismCard from '../ui/TourismCard';
@@ -41,14 +41,14 @@ type PreviewPlace = Place & {
 };
 
 export default function TourismPreviewSection() {
-  const featuredPlaces = getFeaturedPlaces()
+  const previewedPlaces = getPreviewPlaces()
     .slice(0, PREVIEW_COUNT)
     .map(place => ({
       ...place,
       categoryColor: place.categoryColor ?? 'bg-primary-100 text-primary-700',
     })) as PreviewPlace[];
 
-  if (featuredPlaces.length === 0) {
+  if (previewedPlaces.length === 0) {
     return null;
   }
 
@@ -145,7 +145,7 @@ export default function TourismPreviewSection() {
           viewport={{ once: true }}
           variants={listVariants}
         >
-          {featuredPlaces.map(place => (
+          {previewedPlaces.map(place => (
             <motion.div
               key={place.slug}
               variants={itemVariants}

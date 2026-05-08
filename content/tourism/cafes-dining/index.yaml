@@ -115,3 +115,34 @@ places:
     mapsUrl: 'https://maps.app.goo.gl/uWDe4DFRe2QzFrQh6'
     socialUrl: 'https://www.facebook.com/profile.php?id=61586142385311'
     featured: true
+
+  - name: 'Mango Corner'
+    slug: 'mango-corner'
+    description:
+    barangay: 'Jubasan'
+    category: 'Cafes & Dining'
+    categoryColor: 'bg-amber-100 text-amber-700'
+    image: '/images/mango-corner.jpg'
+    socialUrl: 'https://www.facebook.com/profile.php?id=61562084612957'
+
+  - name: 'Park Zone'
+    slug: 'park-zone'
+    description:
+    barangay: 'Jubasan'
+    category: 'Cafe & Dining'
+    categoryColor: 'bg-amber-100 text-amber-700'
+    image: '/images/park-zone.jpg'
+    contact: '0905 176 7709'
+    mapsUrl: 'https://maps.app.goo.gl/yQXRzKmkErYMGY5J9'
+    socialUrl: 'https://www.facebook.com/Parkzoneallen'
+
+  - name: 'Don Macchiatos'
+    slug: 'don-macchiatos'
+    description:
+    barangay: 'Sabang II'
+    category: 'Cafe & Dining'
+    categoryColor: 'bg-amber-100 text-amber-700'
+    image: '/images/don-macchiatos.jpg'
+    contact:
+    mapsUrl:
+    socialUrl: 'https://www.facebook.com/profile.php?id=100088215007936'
