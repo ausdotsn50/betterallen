@@ -30,11 +30,12 @@ export default function SEO({
   const fullTitle = title ? `${title} | ${siteName}` : defaultTitle;
   const fullDescription = description || defaultDescription;
   const fullKeywords = keywords || defaultKeywords;
-  const fullUrl = url || import.meta.env.VITE_WEBSITE_URL || '';
+  const fullUrl =
+    url || window.location.href || import.meta.env.VITE_WEBSITE_URL || '';
   const fullImage =
     image ||
     import.meta.env.VITE_OG_IMAGE_URL ||
-    `${fullUrl}/betterallen_navbar.png`;
+    `${fullUrl}/betterallen_navbar.webp`;
   const twitterHandle = import.meta.env.VITE_TWITTER_HANDLE || '';
 
   return (

@@ -2,7 +2,7 @@
 # This file contains all the local government activity data for the local government portal
 # Non-technical users can easily edit this file to add, remove, or modify local government activity
 
-categories: 
+categories:
   - category: 'Elected Officials'
     slug: 'elected-officials'
     description: 'Meet your local elected officials, including the mayor, vice mayor, and councilors, with their profiles, contact information, and term details.'

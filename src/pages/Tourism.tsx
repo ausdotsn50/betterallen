@@ -4,8 +4,9 @@ import { Heading } from '../components/ui/Heading';
 import { Text } from '../components/ui/Text';
 import {
   tourismCategories,
-  getTourismPlaces,
   getFeaturedPlaces,
+  getTourismPlaces,
+  isTourismCategory,
 } from '../data/tourismLoader';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import SEO from '../components/SEO';
@@ -13,7 +14,6 @@ import { Card, CardContent } from '@bettergov/kapwa/card';
 import { Banner } from '@bettergov/kapwa/banner';
 import { useState, useEffect } from 'react';
 import { resolveLucideIcon } from '../lib/utils';
-import TourismCard from '@/components/ui/TourismCard';
 import { MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FiFacebook } from 'react-icons/fi';
@@ -32,16 +32,6 @@ const Tourism: React.FC = () => {
     );
     return () => clearInterval(id);
   }, []);
-
-  const getCategory = () => {
-    return tourismCategories.categories.find(c => c.slug === category);
-  };
-
-  const categoryData = getCategory();
-  const Icon = resolveLucideIcon(categoryData?.icon);
-
-  const places = category && categoryData ? getTourismPlaces(category) : [];
-
   if (!category) {
     return (
       <>
@@ -167,7 +157,11 @@ const Tourism: React.FC = () => {
     );
   }
 
-  if (!categoryData) {
+  const categoryData = tourismCategories.categories.find(
+    c => c.slug === category
+  );
+
+  if (!categoryData || !isTourismCategory(category)) {
     return (
       <Section className="p-3 mb-12">
         <Breadcrumbs
@@ -188,47 +182,73 @@ const Tourism: React.FC = () => {
     );
   }
 
+  const places = getTourismPlaces(category);
+  const CatIcon = resolveLucideIcon(categoryData.icon);
+
   return (
     <>
       <SEO
-        title={`${categoryData.category} | Tourism`}
+        title={categoryData.category}
         description={categoryData.description}
-        keywords={`${categoryData.category}, tourism, travel, attractions, ${import.meta.env.VITE_GOVERNMENT_NAME}`}
+        keywords={`${categoryData.category}, tourism, travel, ${import.meta.env.VITE_GOVERNMENT_NAME}`}
       />
-      <Section className="p-3 mb-12" maxWidth="full">
+      <Section
+        className="p-3 mb-12"
+        aria-label={`${categoryData.category} places`}
+      >
         <Breadcrumbs
           items={[
             { label: 'Home', href: '/' },
             { label: 'Tourism', href: '/tourism' },
             { label: categoryData.category },
           ]}
-          lightBg={true}
           className="mb-8"
         />
-        <Icon className="h-8 w-8 mb-4 text-primary-600 rounded-md" />
-        <Heading level={3}>{categoryData.category}</Heading>
+        <div
+          className={`${categoryData.color.bg} ${categoryData.color.text} p-3 rounded-md mb-4 w-fit`}
+          aria-hidden="true"
+        >
+          <CatIcon className="h-6 w-6" aria-hidden="true" />
+        </div>
+        <Heading>{categoryData.category}</Heading>
         <Text className="text-gray-600 mb-6">{categoryData.description}</Text>
 
         {places.length === 0 ? (
           <Text className="text-gray-500 text-center py-8">
-            No places listed for this category yet.
+            No places available in this category at the moment.
           </Text>
         ) : (
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {places.map(place => (
-              <TourismCard
+              <Card
                 key={place.slug}
-                name={place.name}
-                description={place.description}
-                slug={place.slug}
-                barangay={place.barangay}
-                category={place.category}
-                categoryColor={place.categoryColor}
-                image={place.image}
-                mapsUrl={place.mapsUrl}
-                contact={place.contact}
-                socialUrl={place.socialUrl}
-              />
+                hoverable
+                className={`h-full border-t-4 ${categoryData.color.border}`}
+              >
+                <CardContent>
+                  {place.image && (
+                    <div
+                      className="h-40 bg-cover bg-center rounded-md mb-4"
+                      style={{ backgroundImage: `url(${place.image})` }}
+                      aria-hidden="true"
+                    />
+                  )}
+                  <Heading
+                    level={5}
+                    className="font-semibold text-gray-900 mb-2"
+                  >
+                    {place.name}
+                  </Heading>
+                  <Text className="text-sm text-gray-600 mb-2">
+                    {place.description}
+                  </Text>
+                  {place.barangay && (
+                    <span className="inline-block px-2 py-1 text-xs font-medium rounded-sm bg-gray-100 text-gray-800">
+                      {place.barangay}
+                    </span>
+                  )}
+                </CardContent>
+              </Card>
             ))}
           </div>
         )}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SEO from '../../../components/SEO';
 import { Heading } from '../../../components/ui/Heading';
 import { Text } from '../../../components/ui/Text';
 import {
@@ -78,6 +79,11 @@ export default function MunicipalCommitteesPage() {
 
   return (
     <main className="p-4 md:p-6" aria-label="Municipal committees directory">
+      <SEO
+        title="Municipal Committees"
+        description="Active standing committees of the Sangguniang Bayan, including chairpersons and member assignments."
+        keywords="municipal committees, sangguniang bayan, local legislation, committee assignments"
+      />
       {/* Header */}
       <div className="text-center mb-6 md:mb-8">
         <Heading level={2}>Committees</Heading>

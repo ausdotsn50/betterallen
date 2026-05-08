@@ -1,4 +1,5 @@
 import { MapPinIcon, User2 } from 'lucide-react';
+import SEO from '@/components/SEO';
 import { PageHero } from '@/components/layout/PageLayouts';
 import { Heading } from '@/components/ui/Heading';
 import { Text } from '@/components/ui/Text';
@@ -17,6 +18,11 @@ export default function BarangaysIndex() {
       className="mx-auto max-w-7xl px-4 py-6 md:px-8 lg:px-12"
       aria-label="Barangays directory"
     >
+      <SEO
+        title="Barangays"
+        description={`Browse the ${sortedBarangays.length} component barangays of the municipality, including officials and contact information.`}
+        keywords="barangays, local government units, community, municipal subdivisions"
+      />
       <PageHero
         title="Local Barangays"
         description={`${sortedBarangays.length} component barangays of the municipality.`}
