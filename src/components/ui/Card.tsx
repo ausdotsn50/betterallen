@@ -435,7 +435,7 @@ export const CardContactInfo = ({
             rel="noreferrer"
             className="text-kapwa-text-brand truncate font-bold hover:underline"
           >
-            Official Website
+            Website
           </a>
         </div>
       )}

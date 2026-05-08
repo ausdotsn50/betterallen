@@ -52,7 +52,7 @@ VITE_FACEBOOK_URL=https://facebook.com/your-government
 VITE_TWITTER_URL=https://twitter.com/your-government
 VITE_INSTAGRAM_URL=https://instagram.com/your-government
 VITE_YOUTUBE_URL=https://youtube.com/your-government
-VITE_SITE_DESCRIPTION=Official website of Your City/Municipality
+VITE_SITE_DESCRIPTION=Community-driven portal for Your City/Municipality
 VITE_SITE_KEYWORDS=government, local government, services, your city
 ```
 
