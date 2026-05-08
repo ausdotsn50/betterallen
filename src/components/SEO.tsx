@@ -33,9 +33,7 @@ export default function SEO({
   const fullUrl =
     url || window.location.href || import.meta.env.VITE_WEBSITE_URL || '';
   const fullImage =
-    image ||
-    import.meta.env.VITE_OG_IMAGE_URL ||
-    `${fullUrl}/betterallen_navbar.webp`;
+    image || import.meta.env.VITE_OG_IMAGE_URL || `${fullUrl}/og-image.webp`;
   const twitterHandle = import.meta.env.VITE_TWITTER_HANDLE || '';
 
   return (
