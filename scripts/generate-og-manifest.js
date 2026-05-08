@@ -214,7 +214,7 @@ if (tourismData?.categories) {
 }
 
 // ── Write manifest as JS module ──
-const outDir = path.join(root, 'functions');
+const outDir = path.join(root, 'worker');
 if (!fs.existsSync(outDir)) {
   fs.mkdirSync(outDir, { recursive: true });
 }
