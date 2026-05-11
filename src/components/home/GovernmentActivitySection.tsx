@@ -1,11 +1,11 @@
 import Section from '../ui/Section';
-import * as LucideIcons from 'lucide-react';
 import { Landmark, Gavel, ShieldCheck } from 'lucide-react';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { useTranslation } from '../../hooks/useTranslation';
 import { Card, CardContent } from '@bettergov/kapwa/card';
 import { motion } from 'motion/react';
+import GovernmentNav from '../government/GovernmentNav';
 
 const listVariants = {
   hidden: { opacity: 0 },
@@ -23,23 +23,7 @@ const itemVariants = {
 import { Link } from 'react-router-dom';
 import { toTitleCase } from '../../lib/stringUtils';
 
-import {
-  executiveOfficials,
-  governmentCategories,
-} from '../../data/yamlLoader';
-
-interface Subcategory {
-  name: string;
-  slug: string;
-}
-
-interface Category {
-  category: string;
-  slug: string;
-  subcategories: Subcategory[];
-  description: string;
-  icon: string;
-}
+import { executiveOfficials } from '../../data/yamlLoader';
 
 interface GovernmentActivitySectionProps {
   title?: string;
@@ -59,17 +43,8 @@ export default function GovernmentActivitySection({
     official.slug?.includes('vice')
   );
 
-  const getIcon = (category: string) => {
-    const IconComponent = LucideIcons[
-      category as keyof typeof LucideIcons
-    ] as React.ComponentType<{ className?: string }>;
-    return IconComponent ? <IconComponent className="h-6 w-6" /> : null;
-  };
-
-  const displayedCategories = governmentCategories.categories as Category[];
-
   return (
-    <Section id="government">
+    <Section>
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -81,7 +56,7 @@ export default function GovernmentActivitySection({
           {description || t('governmentActivity.description')}
         </Text>{' '}
         <Heading level={4} className="mb-6 mt-8">
-          Elected Officials
+          Local Chief Executives
         </Heading>
       </motion.div>
 
@@ -178,44 +153,7 @@ export default function GovernmentActivitySection({
       <Heading level={4} className="mb-6 mt-8">
         Government Departments
       </Heading>
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={listVariants}
-      >
-        {displayedCategories.map(category => (
-          <motion.div key={category.slug} variants={itemVariants}>
-            <Card hoverable className="border-t-4 border-primary-500">
-              <Link
-                to={`/government/${category.slug}`}
-                aria-label={`View ${category.category} department`}
-                className="mt-auto text-primary-600 hover:text-primary-700 font-medium transition-colors inline-flex items-center"
-              >
-                <CardContent className="flex flex-col h-full p-6">
-                  <div className="flex gap-2">
-                    <div
-                      className="bg-primary-100 text-primary-600 p-3 rounded-md mb-4 self-start"
-                      aria-hidden="true"
-                    >
-                      {getIcon(category.icon)}
-                    </div>
-
-                    <Heading
-                      level={5}
-                      className="text-lg font-semibold mb-4 text-gray-900 self-center"
-                    >
-                      {category.category}
-                    </Heading>
-                  </div>
-                  <Text className="text-gray-800">{category.description}</Text>
-                </CardContent>
-              </Link>
-            </Card>
-          </motion.div>
-        ))}
-      </motion.div>
+      <GovernmentNav />
     </Section>
   );
 }

@@ -3,6 +3,7 @@ import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { Card, CardContent } from '@bettergov/kapwa/card';
 import { motion } from 'motion/react';
+import Section from '../ui/Section';
 
 const listVariants = {
   hidden: { opacity: 0 },
@@ -40,8 +41,8 @@ const bettergov = yaml.load(betterGovYaml) as BetterGovData;
 
 const AboutSection: React.FC = () => {
   return (
-    <section
-      className="px-4 py-12 bg-gray-50 sm:px-10 lg:px-20 xl:px-30"
+    <Section
+      className="py-12 bg-gray-50"
       aria-label="About Allen and BetterGov"
     >
       <div className="max-w-352 mx-auto">
@@ -79,7 +80,7 @@ const AboutSection: React.FC = () => {
         >
           {/* Allen Card */}
           <motion.div variants={itemVariants} className="h-full">
-            <Card className="h-full bg-white border-gray-200 hover:border-primary-300 hover:-translate-y-2 transition-all duration-200">
+            <Card className="h-full bg-white border-gray-200 hover:border-primary-200 hover:-translate-y-2 transition-all duration-200">
               <CardContent className="flex flex-col justify-between h-full p-8">
                 <div>
                   <div
@@ -108,7 +109,7 @@ const AboutSection: React.FC = () => {
 
           {/* BetterGov Card */}
           <motion.div variants={itemVariants} className="h-full">
-            <Card className="h-full bg-primary-600 border-primary-700 hover:bg-primary-500 hover:-translate-y-2 transition-all duration-200">
+            <Card className="h-full bg-primary-600 hover:bg-primary-500 hover:-translate-y-2 transition-all duration-200">
               <CardContent className="flex flex-col justify-between h-full p-8">
                 <div>
                   <div
@@ -136,7 +137,7 @@ const AboutSection: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
-    </section>
+    </Section>
   );
 };
 

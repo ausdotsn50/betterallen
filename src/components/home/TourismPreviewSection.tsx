@@ -2,20 +2,10 @@ import Section from '../ui/Section';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { Link } from 'react-router-dom';
-import { tourismCategories, getPreviewPlaces } from '../../data/tourismLoader';
+import { getPreviewPlaces } from '../../data/tourismLoader';
 import type { Place } from '../../data/tourismLoader';
 import { MapPin } from 'lucide-react';
 import TourismCard from '../ui/TourismCard';
-import { resolveLucideIcon } from '@/lib/utils';
-import { Card, CardContent } from '@bettergov/kapwa/card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
 import { motion } from 'motion/react';
 
 const listVariants = {
@@ -53,7 +43,7 @@ export default function TourismPreviewSection() {
   }
 
   return (
-    <Section className="border-0.5 border-gray-100 bg-gray-50" maxWidth="full">
+    <Section className="border-0.5 border-gray-100 bg-gray-50">
       <div className="max-w-352 mx-auto">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
@@ -75,6 +65,43 @@ export default function TourismPreviewSection() {
           </Text>
         </motion.div>
 
+        <motion.div initial="hidden" whileInView="show" variants={itemVariants}>
+          <Heading level={4} className="mb-6">
+            Popular Spots in Allen
+          </Heading>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={listVariants}
+        >
+          {' '}
+          {previewedPlaces.map(place => (
+            <motion.div
+              key={place.slug}
+              variants={itemVariants}
+              className="h-full"
+            >
+              <TourismCard
+                name={place.name}
+                description={place.description}
+                slug={place.slug}
+                barangay={place.barangay}
+                category={place.category}
+                categoryColor={place.categoryColor}
+                image={place.image}
+                mapsUrl={place.mapsUrl}
+                contact={place.contact}
+                socialUrl={place.socialUrl}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/*
         {tourismCategories.categories.length === 0 ? (
           <Text className="text-gray-500 text-center py-8">
             No tourism categories available at the moment.
@@ -133,41 +160,7 @@ export default function TourismPreviewSection() {
             </Carousel>
           </motion.div>
         )}
-        <motion.div initial="hidden" whileInView="show" variants={itemVariants}>
-          <Heading level={4} className="mb-6 mt-12">
-            Popular Spots in Allen
-          </Heading>
-        </motion.div>
-
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={listVariants}
-        >
-          {' '}
-          {previewedPlaces.map(place => (
-            <motion.div
-              key={place.slug}
-              variants={itemVariants}
-              className="h-full"
-            >
-              <TourismCard
-                name={place.name}
-                description={place.description}
-                slug={place.slug}
-                barangay={place.barangay}
-                category={place.category}
-                categoryColor={place.categoryColor}
-                image={place.image}
-                mapsUrl={place.mapsUrl}
-                contact={place.contact}
-                socialUrl={place.socialUrl}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
+        */}
 
         <div className="mt-8 text-center">
           <Link

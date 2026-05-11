@@ -57,7 +57,7 @@ function App() {
 
                 {/* 2. Municipal Offices Branch (Sidebar Layout + Content) */}
                 <Route path="municipal-offices" element={<MunicipalOffices />}>
-                  <Route index element={<MunicipalOffices />} />
+                  <Route element={<MunicipalOffices />} />
                 </Route>
 
                 {/* 3. Barangays Branch */}
@@ -79,7 +79,6 @@ function App() {
               {/* --------------------------------- */}
 
               <Route path="/about" element={<About />}>
-                <Route index element={<AboutAllen />} />
                 <Route path="allen" element={<AboutAllen />} />
                 <Route path="bettergov" element={<AboutBetterGov />} />
               </Route>

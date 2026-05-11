@@ -32,15 +32,12 @@ export default function Hero() {
                 />
                 {t('hero.browse_services')}
               </Link>
-              <a
-                aria-label={`${t('hero.contact_us')} (opens in new window)`}
-                href="https://bettergov.ph/contact"
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                to="/contact"
                 className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary-600 transition-colors"
               >
                 {t('hero.contact_us')}
-              </a>
+              </Link>
             </div>
           </div>
           {/* Right section with popular services and search */}

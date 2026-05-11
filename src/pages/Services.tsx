@@ -14,6 +14,7 @@ import { Card, CardContent } from '@bettergov/kapwa/card';
 import { Banner } from '@bettergov/kapwa/banner';
 import { resolveLucideIcon } from '../lib/utils';
 import PageBanner from '@/components/ui/PageBanner';
+import SearchBar from '@/components/ui/SearchBar';
 
 const Services: React.FC = () => {
   const { category } = useParams();
@@ -39,12 +40,21 @@ const Services: React.FC = () => {
 
         <PageBanner
           title="Local Government Services"
-          description="Explore official municipal services from the Citizens Charter."
+          description={`All services provided by the LGU of ${import.meta.env.VITE_GOVERNMENT_NAME}. Find what you need for citizenship, business, education, and more.`}
+          search={
+            <SearchBar
+              className="mx-auto w-lg max-w-inherit max-h-inherit"
+              variant="pill"
+              placeholder="Search services (e.g., birth certificate, business permit)"
+            />
+          }
         />
 
         <ServicesSection
-          title={`All local government services`}
+          /*
+          title={`Local Government Services`}
           description={`All services provided by the LGU of ${import.meta.env.VITE_GOVERNMENT_NAME}. Find what you need for citizenship, business, education, and more.`}
+          */
           preview={false}
         />
       </>

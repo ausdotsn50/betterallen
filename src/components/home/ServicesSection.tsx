@@ -45,8 +45,6 @@ interface Category {
 }
 
 export default function ServicesSection({
-  title,
-  description,
   preview,
 }: {
   title?: string;
@@ -59,7 +57,7 @@ export default function ServicesSection({
     const IconComponent = LucideIcons[
       category as keyof typeof LucideIcons
     ] as React.ComponentType<{ className?: string }>;
-    return IconComponent ? <IconComponent className="h-6 w-6" /> : null;
+    return IconComponent ? <IconComponent className="h-5 w-5" /> : null;
   };
 
   const allCategories = serviceCategories.categories as Category[];
@@ -75,8 +73,14 @@ export default function ServicesSection({
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: 'easeOut' as const }}
       >
-        <div className="flex items-center">
+        <div className="text-center">
+          {/* Comment out heading and text temporarily
           <Heading level={2}>{title || t('services.title')}</Heading>
+          <Text size="sm" className="text-gray-600 mt-2 mb-8 mx-auto">
+            {description}
+          </Text>
+          */}
+
           {preview && (
             <div className="ml-auto">
               <Link
@@ -96,9 +100,11 @@ export default function ServicesSection({
           )}
         </div>
 
+        {/*
         <Text className="text-gray-600 mb-6">
           {description || t('services.description')}
         </Text>
+        */}
       </motion.div>
 
       {!preview && (
@@ -111,23 +117,28 @@ export default function ServicesSection({
         >
           {allCategories.map(category => (
             <motion.div key={category.slug} variants={itemVariants}>
-              <Card hoverable className="border-t-4 border-primary-500">
+              <Card
+                hoverable
+                className="flex h-full flex-col bg-white border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+              >
+                {/*<Card hoverable className="border-primary-400 h-full hover:border-accent-400 hover:shadow-md ">/*}
+              {/*border-gray-200 shadow-sm rounded-xl hover:border-primary-400 hover:shadow-md */}
                 <Link
                   to={`/services/${category.slug}`}
                   aria-label={`View ${t(`services.${category.slug}.category`, { defaultValue: category.category })}`}
-                  className="mt-auto text-primary-600 hover:text-primary-700 font-medium transition-colors inline-flex items-center"
+                  className="text-primary-600 hover:text-primary-700 font-medium transition-colors inline-flex items-center"
                 >
                   <CardContent className="flex flex-col h-full p-6">
                     <div className="flex gap-2">
                       <div
-                        className="bg-primary-100 text-primary-600 p-3 rounded-md mb-4 self-start"
+                        className="bg-primary-100 text-primary-400 p-2 rounded-md mb-4 mr-2 self-start"
                         aria-hidden="true"
                       >
                         {getIcon(category.icon)}
                       </div>
 
                       <Heading
-                        level={5}
+                        level={6}
                         className="text-lg font-semibold mb-4 text-gray-900 self-center"
                       >
                         {t(`services.${category.slug}.category`, {
@@ -135,7 +146,7 @@ export default function ServicesSection({
                         })}
                       </Heading>
                     </div>
-                    <Text className="text-gray-800">
+                    <Text size="sm" className="text-gray-800 mx-auto">
                       {category.description}
                     </Text>
                   </CardContent>
@@ -175,7 +186,7 @@ export default function ServicesSection({
                   >
                     <Link
                       to={`/services/${category.slug}`}
-                      className="mt-auto text-primary-600 hover:text-primary-700 font-medium transition-colors inline-flex items-center"
+                      className="text-primary-600 hover:text-primary-700 font-medium transition-colors inline-flex items-center"
                     >
                       <CardContent className="flex flex-col h-full p-6">
                         <div className="flex gap-2">
@@ -219,7 +230,7 @@ export default function ServicesSection({
                   >
                     <Link
                       to={`/services/${category.slug}`}
-                      className="mt-auto text-primary-600 hover:text-primary-700 font-medium transition-colors inline-flex items-center"
+                      className="text-primary-600 hover:text-primary-700 font-medium transition-colors inline-flex items-center"
                     >
                       <CardContent className="flex flex-col h-full p-6">
                         <div className="flex gap-2">

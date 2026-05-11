@@ -24,7 +24,6 @@ const Contact = () => {
       <PageBanner
         title="Contact Us"
         description="Get in touch with us and access emergency hotlines."
-        hideSearch={true}
       />
 
       <main aria-label="Contact information and hotlines">

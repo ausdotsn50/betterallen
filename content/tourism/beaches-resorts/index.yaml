@@ -8,7 +8,7 @@ places:
     preview: true
     image: '/images/caba.jpg'
     mapsUrl: 'https://maps.app.goo.gl/pq4zygcsmtvFeb98A'
-  # Birmingham as resort than lodging
+  
   - name: 'Birmingham Allen Resort'
     slug: 'birmingham-hotel'
     description: 'A hotel resort in the heart of Allen. Offering scenice views, comfortable rooms and excellent service.'
