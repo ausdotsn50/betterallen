@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = process.env.VITE_SITE_URL || 'https://betterallen.gov.ph';
+const BASE_URL = process.env.VITE_WEBSITE_URL || 'https://betterallen.org';
 
 // Helper function to read YAML files
 function readYamlFile(filePath) {
@@ -42,21 +42,10 @@ function generateSitemapEntries() {
     { path: '/services', priority: '0.8', changefreq: 'weekly' },
     { path: '/government', priority: '0.8', changefreq: 'weekly' },
     {
-      path: '/government/elected-officials',
-      priority: '0.8',
-      changefreq: 'weekly',
-    },
-    {
       path: '/government/elected-officials/committees',
       priority: '0.7',
       changefreq: 'monthly',
     },
-    {
-      path: '/government/municipal-offices',
-      priority: '0.7',
-      changefreq: 'monthly',
-    },
-    { path: '/government/barangays', priority: '0.7', changefreq: 'monthly' },
     { path: '/tourism', priority: '0.8', changefreq: 'weekly' },
     { path: '/about', priority: '0.7', changefreq: 'monthly' },
     { path: '/about/allen', priority: '0.6', changefreq: 'monthly' },
