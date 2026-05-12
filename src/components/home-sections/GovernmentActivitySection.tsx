@@ -5,7 +5,7 @@ import { Text } from '../ui/Text';
 import { useTranslation } from '../../hooks/useTranslation';
 import { Card, CardContent } from '@bettergov/kapwa/card';
 import { motion } from 'motion/react';
-import GovernmentNav from '../government/GovernmentNav';
+import GovernmentNav from '../gov-components/GovernmentNav';
 
 const listVariants = {
   hidden: { opacity: 0 },

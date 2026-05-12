@@ -8,8 +8,8 @@ import {
 } from '../../../data/yamlLoader';
 import CommitteeCard, {
   type Committee,
-} from '../../../components/government/CommitteeCard';
-import CommitteesEmptyState from '../../../components/government/CommitteesEmptyState';
+} from '../../../components/gov-components/CommitteeCard';
+import CommitteesEmptyState from '../../../components/gov-components/CommitteesEmptyState';
 
 export default function MunicipalCommitteesPage() {
   const [searchTerm] = useState('');

@@ -17,7 +17,7 @@ import { resolveLucideIcon } from '../lib/utils';
 import { MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FiFacebook } from 'react-icons/fi';
-import TourismCard from '@/components/ui/TourismCard';
+import TourismCard from '@/components/tourism-components/TourismCard';
 
 const heroImages = getFeaturedPlaces().map(p => p.image);
 

@@ -11,7 +11,7 @@ const data = aboutAllenData;
 
 const AboutAllen: React.FC = () => {
   return (
-    <>
+    <main>
       <SEO
         title={`About ${data.name}`}
         description={data.description}
@@ -142,7 +142,7 @@ const AboutAllen: React.FC = () => {
           </div>
         </div>
       </Section>
-    </>
+    </main>
   );
 };
 

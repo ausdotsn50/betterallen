@@ -1,8 +1,8 @@
 import { Card, CardContent } from '@bettergov/kapwa/card';
 import { MapPin } from 'lucide-react';
 import type { Place } from '../../data/tourismLoader';
-import { Heading } from './Heading';
-import { Text } from './Text';
+import { Heading } from '../ui/Heading';
+import { Text } from '../ui/Text';
 
 type TourismCardProps = Omit<Place, 'featured'>;
 export default function TourismCard({

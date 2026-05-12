@@ -1,9 +1,9 @@
 import { Outlet, useLocation, Navigate } from 'react-router-dom';
-import SEO from '../components/SEO';
-import Section from '../components/ui/Section';
-import ElectedOfficialsNav from '../components/government/ElectedOfficialsNav';
+import SEO from '../../components/SEO';
+import Section from '../../components/ui/Section';
+import ElectedOfficialsNav from '../../components/gov-components/ElectedOfficialsNav';
 import PageBanner from '@/components/ui/PageBanner';
-import GovernmentNav from '@/components/government/GovernmentNav';
+import GovernmentNav from '@/components/gov-components/GovernmentNav';
 
 const Government: React.FC = () => {
   const location = useLocation();

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { getPreviewPlaces } from '../../data/tourismLoader';
 import type { Place } from '../../data/tourismLoader';
 import { MapPin } from 'lucide-react';
-import TourismCard from '../ui/TourismCard';
+import TourismCard from '../tourism-components/TourismCard';
 import { motion } from 'motion/react';
 
 const listVariants = {

@@ -15,8 +15,8 @@ import {
   type ExecutiveOfficial,
   type LegislativeOfficial,
 } from '../../../data/yamlLoader';
-import ElectedLeaderCard from '../../../components/government/ElectedLeaderCard';
-import CouncilMemberCard from '../../../components/government/CouncilMemberCard';
+import ElectedLeaderCard from '../../../components/gov-components/ElectedLeaderCard';
+import CouncilMemberCard from '../../../components/gov-components/CouncilMemberCard';
 
 type CouncilMember = LegislativeOfficial;
 

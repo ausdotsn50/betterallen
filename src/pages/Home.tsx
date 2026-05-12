@@ -1,9 +1,9 @@
-import Hero from '../components/sections/Hero';
-// import ServicesSection from '../components/home/ServicesSection';
-import TourismPreviewSection from '../components/home/TourismPreviewSection';
-import GovernmentActivitySection from '../components/home/GovernmentActivitySection';
-import AboutSection from '../components/home/AboutSection';
-import ContactPreviewSection from '../components/home/ContactPreviewSection';
+import Hero from '../components/home-sections/Hero';
+// import ServicesSection from '../components/home-sections/ServicesSection';
+import TourismPreviewSection from '../components/home-sections/TourismPreviewSection';
+import GovernmentActivitySection from '../components/home-sections/GovernmentActivitySection';
+import AboutSection from '../components/home-sections/AboutSection';
+import ContactPreviewSection from '../components/home-sections/ContactPreviewSection';
 import SEO from '../components/SEO';
 
 const Home: React.FC = () => {

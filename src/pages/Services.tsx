@@ -8,7 +8,7 @@ import {
   type Subcategory,
 } from '../data/yamlLoader';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
-import ServicesSection from '../components/home/ServicesSection';
+import ServicesSection from '../components/home-sections/ServicesSection';
 import SEO from '../components/SEO';
 import { Card, CardContent } from '@bettergov/kapwa/card';
 import { Banner } from '@bettergov/kapwa/banner';

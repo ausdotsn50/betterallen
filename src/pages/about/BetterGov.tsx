@@ -10,7 +10,7 @@ const data = aboutBetterGovData;
 
 const AboutBetterGov: React.FC = () => {
   return (
-    <>
+    <main>
       <SEO
         title={`About ${data.name}`}
         description={data.description}
@@ -179,7 +179,7 @@ const AboutBetterGov: React.FC = () => {
           </div>
         </div>
       </Section>
-    </>
+    </main>
   );
 };
 
